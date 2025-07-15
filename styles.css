@@ -99,52 +99,77 @@ h1, h2, h3, h4 {
 
 /* Encabezado principal en movimiento */
 .title_content {
-  color: var(--colorPrimario);
+  width: 100%;
+  overflow: hidden;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  font-size: 8rem;
+  align-content: center;
+  justify-content: center;
+  padding-top: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.cinta {
+  display: flex;
+  white-space: nowrap;
+  align-content: center;
+  animation: mover 90s linear infinite;
+}
+
+.bloque {
+  display: flex;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  font-size: 10rem;
   font-family: var(--fontPrimary);
   font-weight: 700;
-  text-align: center;
-  position: relative;
-  padding-top: 2rem;
-  gap: 3rem;
-  animation-name: move-left;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: alternate;
-  animation-duration: 40s;
-  overflow: hidden;
-  width: 100%;
-  width: max-content;
+  text-transform: uppercase;
+  color: var(--colorPrimario);
+  padding: 0 3rem;
 }
 
-@keyframes  move-left {
-  from {transform: translateX(0%);}
-  to {transform: translateX(-100%);}
+@keyframes mover {
+  0% {
+    transform: translateX(35%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
+/* Subtítulo de Encabezado principal en movimiento */
 .subtitle_content {
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+  white-space: nowrap;
+  font-family: var(--fontSecundary);
+  font-size: 2rem;
   color: var(--colorTerciary);
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  font-size: 2rem;
-  font-family: var(--fontSecundary);
-  text-align: center;
-  position: relative;
-  animation-name: move-right;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: alternate;
-  animation-duration: 40s;
-  overflow: hidden;
-  width: max-content;
-  margin: 0px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-@keyframes  move-right {
-  from {transform: translateX(0%);}
-  to {transform: translateX(100%);}
+.cinta_sub {
+  display: flex;
+  animation: mover_sub 55s linear infinite;
+}
+
+.bloque_sub {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+@keyframes mover_sub {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(45%);
+  }
 }
