@@ -6,12 +6,15 @@
   --colorWhite: white;
   --fontPrimary: 'Syncopate', Arial, Helvetica, sans-serif;
   --fontSecundary: 'Jost', Helvetica, sans-serif;
+  --h1Size: 64px;
 }
 
 /* Ajustes generales */
 
 *, *::before, *::after{
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -20,7 +23,8 @@ body {
   font-family: var(--fontSecundary);
   font-size: 16px;
   background-color: var(--colorSecundario);
-  overflow: hidden;
+  overflow: auto;
+  color: var(--colorWhite);
 }
 
 h1, h2, h3, h4 {
@@ -45,11 +49,10 @@ h1, h2, h3, h4 {
 }
 
 .menu li {
-  display: flex;
-  flex-wrap: nowrap;
   text-decoration: none;
   letter-spacing: 2px;
-  justify-content: center;
+  text-align: center;
+  display: flex;
 }
 
 .menu li a {
@@ -146,7 +149,7 @@ h1, h2, h3, h4 {
   background: transparent;
   white-space: nowrap;
   font-family: var(--fontSecundary);
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--colorTerciary);
   display: flex;
   align-items: center;
@@ -178,7 +181,8 @@ h1, h2, h3, h4 {
 
 /*Página Proyectos*/
 h1 {
-  font-size: 4rem;
+  font-size: var(--h1Size);
   text-align: center;
-  color: var(--colorWhite);
+  color: var(--colorPrimario);
+  margin: 140px auto 20px auto;
 }
