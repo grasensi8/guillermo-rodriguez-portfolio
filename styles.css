@@ -33,12 +33,33 @@ h1, h2, h3, h4 {
   font-family: var(--fontPrimary);
 }
 
+/*Luz en movimiento decoración*/
+.light {
+  position: absolute;
+  border-radius: 50%;
+  size: 120px;
+  animation: moverX 16s infinite alternate ease-in-out;
+  filter: blur(75px);
+  width: 660px;
+  height: 660px;
+  z-index: -1;
+  opacity: 0.4;
+  background-color: #72D6C9;
+  top: -350px;
+  left: -295px;
+}
+
+@keyframes moverX {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(100vw);}
+}
+
 /* Menú de navegación */
 .menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 4.5rem;
+  gap: 4rem;
   align-items: center;
   flex-wrap: nowrap;
   list-style: none;
@@ -97,6 +118,46 @@ h1, h2, h3, h4 {
 .menu li a.active_link {
   color: var(--colorPrimario);
   border-bottom: 2px solid var(--colorPrimario); 
+  transform: scale(1.1);
+}
+
+/* Iconos Redes sociales */
+.socialMedia {
+
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-content: center;
+  right: 30px;
+  top: 110px;
+  gap: 2px;
+  font-size: 26px;
+  padding: 16px;
+  margin: 16px;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.05); /* fondo blanco semitransparente */
+  border-radius: 12px;
+  backdrop-filter: blur(8px); /* efecto glassmorphism */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  z-index: 12;
+}
+
+.socialMedia li {
+  list-style: none;
+}
+
+.socialMedia li a {
+  color: var(--colorWhite);
+}
+
+.bxl.bx-behance{
+  font-size: 34px;
+}
+
+.socialMedia li i:hover {
+  color: var(--colorPrimario);
   transform: scale(1.1);
 }
 
@@ -186,3 +247,4 @@ h1 {
   color: var(--colorPrimario);
   margin: 140px auto 20px auto;
 }
+
