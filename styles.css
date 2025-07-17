@@ -21,6 +21,10 @@
   padding: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -59,6 +63,7 @@ h1, h2, h3, h4 {
   background-color: #4CC2B2;
   top: -400px;
   left: -295px;
+  overflow-x: hidden;
 }
 
 @keyframes moverX {
@@ -135,7 +140,6 @@ h1, h2, h3, h4 {
 
 /* Iconos Redes sociales */
 .socialMedia {
-
   display: flex;
   position: fixed;
   flex-direction: column;
@@ -143,9 +147,9 @@ h1, h2, h3, h4 {
   right: 30px;
   top: 110px;
   gap: 2px;
-  font-size: 26px;
-  padding: 16px;
-  margin: 16px;
+  font-size: 30px;
+  padding: 16px 16px 8px 16px;
+  margin: 16px 16px 8px 16px;
   flex-wrap: wrap;
   background-color: rgba(255, 255, 255, 0.05); /* fondo blanco semitransparente */
   border-radius: 12px;
@@ -168,6 +172,10 @@ h1, h2, h3, h4 {
   font-size: 34px;
 }
 
+.bxl.bx-github{
+  font-size: 32px;
+}
+
 .socialMedia li i:hover {
   color: var(--colorPrimario);
   transform: scale(1.1);
@@ -188,7 +196,7 @@ h1, h2, h3, h4 {
   display: flex;
   white-space: nowrap;
   align-content: center;
-  animation: mover 90s linear infinite;
+  animation: mover 110s linear infinite;
 }
 
 .bloque {
@@ -213,6 +221,99 @@ h1, h2, h3, h4 {
   100% {
     transform: translateX(0%);
   }
+}
+
+/*Footer*/
+.title_content2 {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-top: 1.5rem;
+  margin-top: 10.5rem;
+}
+
+.cinta2 {
+  display: flex;
+  white-space: nowrap;
+  align-content: center;
+  animation: mover1 40s linear infinite;
+}
+
+.bloque2 {
+  display: flex;
+}
+
+.item1 {
+  display: flex;
+  align-items: center;
+  font-size: 10rem;
+  font-family: var(--fontPrimary);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--colorPrimario);
+  padding: 0 3rem;
+}
+
+@keyframes mover1 {
+  0% {
+    transform: translateX(35%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.item2 {
+  display: flex;
+  align-items: center;
+  font-size: 10rem;
+  font-family: var(--fontPrimary);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--colorPrimario);
+  padding: 0 3rem;
+  overflow: hidden;
+}
+
+.bloque2 a {
+  text-decoration: none;
+}
+
+.bloque2 a:hover {
+  text-decoration: underline;
+  color: var(--colorPrimario);
+}
+
+footer {
+  position: relative;     /* Para que .light2 se posicione respecto al footer */
+  overflow: hidden;       /* Oculta la parte inferior de la luz */
+  height: 500px;
+}
+
+.piedepagina {
+  text-align: center;
+  color: var(--colorPrimario);
+  opacity: 0.5;
+  font-size: 24px;
+  margin-top: 16px;
+}
+
+.light2 {
+  position: absolute;
+  border-radius: 50%;
+  size: 120px;
+  animation: moverX 16s infinite alternate ease-in-out;
+  filter: blur(125px);
+  width: 650px;
+  height: 650px;
+  opacity: 0.5;
+  background-color: #4CC2B2;
+  bottom: -425px;
+  left: -295px;
+  pointer-events: none;
+  overflow: hidden;
 }
 
 /* Subtítulo de Encabezado principal en movimiento */
