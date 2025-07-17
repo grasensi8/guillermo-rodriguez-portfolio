@@ -8,7 +8,6 @@
   <meta name="keywords" content="Guillermo Rodriguez, diseñador gráfico, diseñador ux/ui, portfolio, branding, diseño web, web developer, front-end">
   <meta name="author" content="Guillermo Rodriguez Asensio">
   <title>Portfolio Guillermo Rodriguez Asensio</title>
-  <script src="script.js" defer></script>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!--Preconect fonts: Syncopate & Jost-->
@@ -23,6 +22,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 <body>
+  <div class="custom-cursor" id="cursor"></div>
   <div class="light"></div>
   <header>
     <nav>
@@ -71,12 +71,14 @@
         <div class="bloque_sub" style="white-space: pre;">  Desarrollo Frontend  —  Diseño Gráfico  —  Diseño UX/UI  —  Bienvenido a mi Portfolio  —  &copy;2025  —</div>
       </div>
     </div>
-    <div class="hero__photo">
-      <img src="guillermo.png" alt="Fotografía de Guillermo Rodriguez">
-    </div>
+    <a href="#main">
+      <div class="photo_container">
+        <img class="hero_photo" src="./images/foto final.png" alt="Fotografía de Guillermo Rodriguez">
+      </div>
+    </a>
   </section>
 
-  <main class="container-main">
+  <main id="main" class="container-main">
     <section data-aos="fade-up" data-aos-duration="3000">
       <h2>sobre mí</h2>
       <p class="parragragh_style1">Soy Guillermo Rodríguez Asensio Diseñador Gráfico, Diseñador UX/UI y Desarrollador Front-End con más de 5 años de experiencia desarrollando proyectos de forma autónoma que integran creatividad, funcionalidad y tecnología.
@@ -108,9 +110,18 @@
     </div>
   <div class="light2"></div>
   </footer>
+  <!--Animaciones-->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+  <!--Cursor-->
+  <script>
+  const cursor = document.getElementById('cursor');
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.top = e.clientY + 'px';
+    cursor.style.left = e.clientX + 'px';
+  });
+</script>
 </body>
 </html>

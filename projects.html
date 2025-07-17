@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 <body>
+  <div class="custom-cursor" id="cursor"></div>
   <div class="light"></div>
   <header>
     <nav>
@@ -86,10 +87,16 @@
     </div>
   <div class="light2"></div>
   </footer>
-
+  <!--Animaciones-->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <!--Cursor-->
   <script>
-    AOS.init();
+  const cursor = document.getElementById('cursor');
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.top = e.clientY + 'px';
+    cursor.style.left = e.clientX + 'px';
+  });
   </script>
 </body>
 </html>
