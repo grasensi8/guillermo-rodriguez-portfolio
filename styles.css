@@ -217,7 +217,7 @@ h1, h2, h3, h4 {
   display: flex;
   white-space: nowrap;
   align-content: center;
-  animation: mover 110s linear infinite;
+  animation: mover 130s linear infinite;
   z-index: 2;
 }
 
@@ -359,7 +359,7 @@ footer {
 
 .cinta_sub {
   display: flex;
-  animation: mover_sub 55s linear infinite;
+  animation: mover_sub 65s linear infinite;
 }
 
 .bloque_sub {
@@ -391,13 +391,14 @@ footer {
 }
 
 .hero_photo {
-  max-width: 600px;
+  max-width: 525px;
   height: auto;
   mask-image: linear-gradient(black 80%, transparent);
-  filter: drop-shadow(0 0 30px var(--colorTerciary));
-  animation: aparecer 2s ease-out forwards, resplandor 3s infinite alternate ease-in-out;
-  padding: 0 50px; /* Añade espacio horizontal a la izquierda y derecha */
+  filter: drop-shadow(0 0 20px var(--colorTerciary));
+  animation: aparecer 1s ease-out forwards;
+  padding: 0 20px; /* Añade espacio horizontal a la izquierda y derecha */
   z-index: 0;
+  margin-top: 30px;
 }
 
 .photo_container:hover {
@@ -407,14 +408,43 @@ footer {
 }
 
   @keyframes aparecer {
-    from{opacity:0.2;}
+    from{opacity:0.4;}
     to {opacity: 1;}
     }
 
-  @keyframes resplandor {
-    0% {filter: drop-shadow(0 0 5px var(--colorWhite));}
-    100% {filter: drop-shadow(0 0 20px var(--colorWhite));}
-  }
+.intro-text {
+  font-style: italic;
+  position: absolute;
+  font-size: 20px;
+  right: 42%;
+  top: 320px;
+  text-align: center;
+  color: var(--colorWhite);
+  white-space: nowrap;
+  transition: opacity 2s ease, transform 2s ease;
+  transform: translateX(0px);
+  pointer-events: none;
+  opacity: 0;
+  z-index: -1;
+  font-weight: 300;
+}
+
+.intro-text2 {
+  font-style: italic;
+  position: absolute;
+  font-size: 20px;
+  right: 42%;
+  top: 320px;
+  text-align: center;
+  color: var(--colorWhite);
+  white-space: nowrap;
+  transition: opacity 2s ease, transform 2s ease;
+  transform: translateX(0px);
+  pointer-events: none;
+  opacity: 0;
+  z-index: -1;
+  font-weight: 300;
+}
 
 h2 {
   font-size: var(--h2Size);
