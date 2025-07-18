@@ -26,6 +26,7 @@
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease;
 }
 
 *, *::before, *::after{

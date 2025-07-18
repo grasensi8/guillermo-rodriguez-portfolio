@@ -1,10 +1,21 @@
 //Cursor personalizado
 const cursor = document.getElementById('cursor');
-  document.addEventListener('mousemove', (e) => {
-    cursor.style.top = e.clientY + 'px';
-    cursor.style.left = e.clientX + 'px';
-  }
-);
+
+document.addEventListener('mousemove', (e) => {
+  cursor.style.top = e.clientY + 'px';
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.opacity = '1'; // Asegura que sea visible al moverse
+});
+
+// Cuando el ratón sale de la ventana del navegador
+document.addEventListener('mouseleave', () => {
+  cursor.style.opacity = '0';
+});
+
+// Cuando vuelve a entrar
+document.addEventListener('mouseenter', () => {
+  cursor.style.opacity = '1';
+});
 
 //Mensaje oculto1 en la foto header
 const photoZone = document.getElementById('photoZone');
