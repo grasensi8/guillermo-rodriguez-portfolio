@@ -153,6 +153,11 @@ h1, h2, h3, h4 {
   transform: scale(1.1);
 }
 
+.logo_web {
+  width: 60px;     /* Ajusta el tamaño que quieras */
+  height: auto;     /* Mantiene la proporción */
+}
+
 /* Iconos Redes sociales */
 .socialMedia {
   display: flex;
