@@ -82,7 +82,14 @@
 
     <!--Formulario-->
     <section class="section_space2">
-      <form class="form_container" action="" method="">
+      <form class="form_container" name="contacto" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contacto" />
+
+        <!-- Campo oculto para evitar spam -->
+        <p style="display:none">
+          <label>Si eres humano, deja esto vacío: <input name="bot-field" /></label>
+        </p>
+        
         <label for="email"></label>
         <input id="email" type="email" name="email" placeholder="Tu Email" required>
 
