@@ -88,6 +88,27 @@ h1, h2, h3, h4 {
 }
 
 /* Menú de navegación */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: none;
+  background-color: transparent;
+  box-shadow: none;
+  transition: background-color 0.2s ease, backdrop-filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+nav.scrolled {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  background-color: rgba(28, 31, 30, 0.5);
+}
+
 .menu {
   display: flex;
   flex-direction: row;
@@ -97,7 +118,7 @@ h1, h2, h3, h4 {
   flex-wrap: nowrap;
   list-style: none;
   margin: 1rem auto;
-  padding: 1.5rem;
+  padding: 0.5rem;
   width: 85%;
   box-sizing: border-box;
 }
@@ -200,6 +221,46 @@ h1, h2, h3, h4 {
 .socialMedia li i:hover {
   color: var(--colorPrimario);
   transform: scale(1.1);
+}
+
+/*Volver arriba boton*/
+#backToTop {
+  position: fixed;
+  display: inline-flex;
+  bottom: 50px;
+  right: 30px;
+  color: white;
+  border: none;
+  padding: 10px 10px 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: var(--fontSecundary);
+  z-index: 10;
+  transition: opacity 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.05); /* fondo blanco semitransparente */
+  border-radius: 12px;
+  backdrop-filter: blur(8px); /* efecto glassmorphism */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateX(110px);
+  opacity: 0;
+  transition: opacity 1.2s ease, transform 1.2s ease;
+  pointer-events: none;
+}
+
+#backToTop.show {
+  display: inline-flex;
+  text-align: center;
+  opacity: 1;
+  transform: translateX(-10px);
+  pointer-events: auto; /* vuelve a poder clicarse */
+}
+
+#backToTop.show:hover {
+  background-color: #55555590;
+}
+
+#backToTop i {
+  font-size: 30px;
 }
 
 /* Encabezado principal en movimiento */
@@ -558,7 +619,7 @@ padding: 40px 400px;
   animation-duration: 11s;  /* duración total de la animación por cada elemento */
   animation-iteration-count: infinite;
   animation-fill-mode: both;
-  animation-timing-function: ease;
+  animation-timing-function: ease-in-out;
   color: var(--colorWhite);
 }
 
