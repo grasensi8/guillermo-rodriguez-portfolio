@@ -609,17 +609,17 @@ padding: 40px 400px;
   padding-bottom: 30px;
 }
 
-.services_band_container p{
+.services_band_container p {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 25px;
   flex-direction: column;
   animation-name: colorScaleAnim;
-  animation-duration: 11s;  /* duración total de la animación por cada elemento */
+  animation-duration: 5s;  /* duración total de la animación por cada elemento */
   animation-iteration-count: infinite;
   animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease;
   color: var(--colorWhite);
 }
 
@@ -647,16 +647,16 @@ padding: 40px 400px;
   animation-delay: 0s;
 }
 .services_band_container p:nth-child(2) {
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .services_band_container p:nth-child(3) {
-  animation-delay: 4s;
+  animation-delay: 2s;
 }
 .services_band_container p:nth-child(4) {
-  animation-delay: 6s;
+  animation-delay: 3s;
 }
 .services_band_container p:nth-child(5) {
-  animation-delay: 8s;
+  animation-delay: 4s;
 }
 
 /*Página Proyectos*/
