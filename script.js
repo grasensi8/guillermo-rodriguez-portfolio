@@ -78,3 +78,20 @@ window.addEventListener('scroll', () => {
     nav.classList.remove('scrolled');
   }
 });
+
+//Imagen animación hacer scroll en pag. sobre mí
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  rootMargin: '0px 0px -190px 0px',
+  threshold: 0
+});
+
+document.querySelectorAll('.scroll-flip-down').forEach(el => {
+  observer.observe(el);
+});

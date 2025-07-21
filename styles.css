@@ -560,7 +560,7 @@ h2 {
 }
 
 a.button-primary {
-  margin: 30px auto;
+  margin: 60px auto 30px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -751,4 +751,100 @@ p.parragragh_style3 a {
 
 p.parragragh_style3 a:hover {
   text-decoration: underline;
+}
+
+/*Página Sobre mí*/
+.sobre_mi_photo {
+  display: flex;
+  justify-content: center;
+  max-width: 525px;
+  mask-image: linear-gradient(black 80%, transparent);
+  padding: 0 20px;
+  margin: 80px auto;
+  background-color: var(--colorPrimario);
+}
+
+.scroll-flip-down {
+  opacity: 0;
+  transform: rotateX(-90deg);
+  transform-origin: top;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  will-change: transform, opacity;
+}
+
+.scroll-flip-down.visible {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+/*Banda animada de aplicaciones iconos de herramientas*/
+.tech-band {
+  overflow: hidden;
+  background-color: #1c1f1e;
+  padding: 50px 0;
+  margin: 200px auto 90px auto;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.tech-track {
+  display: flex;
+  width: max-content;
+  animation: scrollIcons 50s linear infinite;
+  gap: 80px;
+}
+
+.tech-icon {
+  width: 70px;
+  height: 70px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.icon-html { background-image: url("images/css-3.png"); }
+.icon-css { background-image: url("images/html.png"); }
+.icon-figma { background-image: url("images/figma.png"); }
+.icon-ilustrator { background-image: url("images/ilustrator.png"); }
+.icon-indesign { background-image: url("images/indesign.png"); }
+.icon-js { background-image: url("images/js.png"); }
+.icon-photoshop { background-image: url("images/photoshop.png"); }
+.icon-premiere { background-image: url("images/premiere.png"); }
+.icon-visual-studio-code { background-image: url("images/Visual_Studio_Code.png"); }
+.icon-after-effects { background-image: url("images/after\ effects.png"); }
+.icon-xd { background-image: url("images/xd.png"); }
+
+@keyframes scrollIcons {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.socialMedia2 {
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  color: white;
+  font-size: 30px;
+  padding: 16px 20px 0 16px;
+  margin: 27px 20px 16px 65px;
+  float: left;
+  border-right: solid 2px white;
+}
+
+.socialMedia2 li {
+  list-style: none;
+  padding-bottom: 12px;
+}
+
+.socialMedia2 li a {
+  color: var(--colorWhite);
+}
+
+.socialMedia2 li i:hover {
+  color: var(--colorPrimario);
+  transform: scale(1.1);
 }
