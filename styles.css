@@ -9,6 +9,7 @@
   --fontSecundary: 'Jost', Helvetica, sans-serif;
   --h1Size: 64px;
   --h2Size: 40px;
+  --h3Size: 30px;
   --bodySize: 32px;
   --bodySize2: 24px;
 }
@@ -523,7 +524,7 @@ h2 {
   padding: 16px 0 16px 0;
   line-height: 160%;
   font-weight: 350;
-  width: 800px;
+  max-width: 800px;
 }
 
 .parragragh_style2 {
@@ -534,7 +535,7 @@ h2 {
   padding: 16px 0 16px 0;
   line-height: 180%;
   font-weight: 400;
-  width: 800px;
+  max-width: 800px;
 }
 
 .parragragh_style3 {
@@ -587,10 +588,10 @@ a.button-primary:hover {
 }
 
 .fondo_banner {
-background-color: #1c1f1e;
-width: 100vw;
-margin-left: calc(-50vw + 50%);
-padding: 40px 400px;
+  background-color: #1c1f1e;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 40px 400px;
 }
 
 .services_band_container {
@@ -623,7 +624,7 @@ padding: 40px 400px;
   color: var(--colorWhite);
 }
 
-.bxs-brush, .bxs-layout, .bx-code, .bxs-megaphone, .bxs-crown {
+.bxs-brush, .bxs-layout, .bx-code, .bx-movie, .bxs-crown {
   font-size: 44px;
 }
 
@@ -850,4 +851,101 @@ p.parragragh_style3 a:hover {
 .socialMedia2 li i:hover {
   color: var(--colorPrimario);
   transform: scale(1.1);
+}
+
+/* Página Servicios */
+
+h3 {
+  font-size: var(--h3Size);
+  text-align: left;
+  color: var(--colorWhite);
+  margin: 20px auto 20px auto;
+  line-height: 140%;
+}
+
+.services_card_container {
+  display: flex;
+  gap: 55px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 200px;
+}
+
+.services_card {
+  max-width: 350px;
+  border-left: solid 2px white;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  transition: 0.3s ease-in;
+}
+
+.services_card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px var(--colorPrimario);
+  border: none;
+}
+
+.parragragh_style4 {
+  font-size: var(--bodySize2);
+  color: var(--colorWhite);
+  font-family: var(--fontSecundary);
+  line-height: 160%;
+  font-weight: 350;
+  max-width: 800px;
+}
+
+.projects_cards__show_container {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  display: flex;
+  background-color: #1c1f1e;
+  width: 100vw;
+  position: relative;
+  left: calc(-50vw + 50%);
+  padding: 80px 80px;
+  gap: 40px;
+}
+
+.projects_cards__show_container li {
+  list-style: none;
+  flex-shrink: 0;
+  flex: 0 0 auto;
+}
+
+.projects_cards__show_container li img {
+  box-shadow: 0 0px 30px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.scroll-arrow {
+  font-size: 48px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  padding: 10px;
+  transition: 0.3s ease;
+}
+.scroll-arrow:hover {
+  background-color:var(--colorPrimario);
+  color: var(--colorSecundario);
+}
+
+.left-arrow {
+  left: 0px;
+}
+.right-arrow {
+  right: 0px;
+}
+
+.projects_wrapper {
+  position: relative;
+  width: 100%;
 }
