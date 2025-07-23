@@ -686,7 +686,8 @@ h1 {
 }
 
 input[name="email"],
-input[name="name"] {
+input[name="name"],
+input[name="asunto"] {
   background-color: #1c1f1e;
   color: var(--colorWhite);
   padding: 16px;
@@ -783,7 +784,7 @@ p.parragragh_style3 a:hover {
   overflow: hidden;
   background-color: #1c1f1e;
   padding: 50px 0;
-  margin: 200px auto 90px auto;
+  margin: 60px auto 90px auto;
   width: 100%;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
@@ -948,4 +949,175 @@ h3 {
 .projects_wrapper {
   position: relative;
   width: 100%;
+}
+
+/* Página Habilidades */
+.skill-main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-auto-flow: column;
+  gap: 100px;
+}
+
+.skill-bar {
+  margin-bottom: 2.3rem;
+}
+
+.skill-main h3 {
+  text-align: center;
+}
+
+.skill-left .skill-bar .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.skill-left .skill-bar .bar {
+  width: 100%;
+  height: 10px;
+  background-color: #1c1f1e;
+  border-radius: 25px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.skill-bar .bar span {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-color: var(--colorPrimario);
+  border-radius: 25px;
+  box-shadow:  0 0 12px #b5ebda;
+}
+
+.skill-bar .bar .adobe {
+  width: 90%;
+  animation: adobe 2s;
+}
+
+.skill-bar .bar .branding {
+  width: 80%;
+  animation: branding 3s;
+}
+
+.skill-bar .bar .tipografia {
+  animation: tipografia 4s;
+  width: 90%;
+}
+
+.skill-bar .bar .digitales {
+  animation: digitales 5s;
+  width: 85%;
+}
+
+.skill-bar .bar .color {
+  width: 80%;
+  animation: color1 6s;
+}
+
+.skill-bar .bar .motion {
+  width: 75%;
+  animation: motion 7s;
+}
+
+.skill-bar .bar .react {
+  width: 70%;
+  animation: react 4s forwards;
+}
+
+@keyframes adobe {
+  from{width: 0%;}
+  to{width: 90%;}
+}
+
+@keyframes branding {
+  from{width: 0%;}
+  to{width: 80%;}
+}
+
+@keyframes tipografia {
+  from{width: 0%;}
+  to{width: 90%;}
+}
+
+@keyframes digitales {
+  from{width: 0%;}
+  to{width: 85%;}
+}
+
+@keyframes color1 {
+  from{width: 0%;}
+  to{width: 80%;}
+}
+
+@keyframes motion {
+  from{width: 0%;}
+  to{width: 75%;}
+}
+
+@keyframes react {
+  from{width: 0%;}
+  to{width: 70%;}
+}
+
+.professional {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.box {
+  margin: 10px 0;
+  flex: 1 1 15rem;
+  position: relative;
+}
+
+.box .text {
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.box .text .big {
+  font-weight: 500;
+  font-size: 25px;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box .text small {
+  display: block;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.circle {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle .points {
+  width: 2px;
+  height: 12px;
+  background-color: #1c1f1e;
+  position: absolute;
+  border-radius: 3px;
+  transform: rotate(calc(var(--i)*7deg)) translateY(-55px);
+  animation: glow 0.04s linear forwards;
+  animation-delay: calc(var(--i)*0.05s);
+}
+
+@keyframes glow {
+  from{ background-color: #1c1f1e; box-shadow: none;}
+  to{background-color: var(--colorPrimario); box-shadow:  0 0 12px #b5ebda;}
 }

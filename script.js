@@ -96,7 +96,6 @@ document.querySelectorAll('.scroll-flip-down').forEach(el => {
   observer.observe(el);
 });
 
-
 //Animación de servicios show room portfolio
   const container = document.querySelector('.projects_cards__show_container');
   const scrollAmount = 350;
