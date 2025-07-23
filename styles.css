@@ -995,36 +995,64 @@ h3 {
 }
 
 .skill-bar .bar .adobe {
+  width: 0%;
+}
+
+.skill-bar .bar .adobe.animate {
   width: 90%;
   animation: adobe 2s;
 }
 
 .skill-bar .bar .branding {
+  width: 0%;
+}
+
+.skill-bar .bar .branding.animate {
   width: 80%;
   animation: branding 3s;
 }
 
 .skill-bar .bar .tipografia {
+  width: 0%;
+}
+
+.skill-bar .bar .tipografia.animate {
   animation: tipografia 4s;
   width: 90%;
 }
 
 .skill-bar .bar .digitales {
+  width: 0%;
+}
+
+.skill-bar .bar .digitales.animate {
   animation: digitales 5s;
   width: 85%;
 }
 
 .skill-bar .bar .color {
+  width: 0%;
+}
+
+.skill-bar .bar .color.animate {
   width: 80%;
   animation: color1 6s;
 }
 
 .skill-bar .bar .motion {
+  width: 0%;
+}
+
+.skill-bar .bar .motion.animate {
   width: 75%;
   animation: motion 7s;
 }
 
 .skill-bar .bar .react {
+  width: 0%;
+}
+
+.skill-bar .bar .react.animate {
   width: 70%;
   animation: react 4s forwards;
 }
@@ -1113,8 +1141,12 @@ h3 {
   position: absolute;
   border-radius: 3px;
   transform: rotate(calc(var(--i)*7deg)) translateY(-55px);
+}
+
+.points.marked {
   animation: glow 0.04s linear forwards;
   animation-delay: calc(var(--i)*0.05s);
+  opacity: 1;
 }
 
 @keyframes glow {

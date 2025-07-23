@@ -18,7 +18,7 @@ document.addEventListener('mouseenter', () => {
 });
 
 //Mensaje oculto1 en la foto header
-const photoZone = document.getElementById('photoZone');
+/*const photoZone = document.getElementById('photoZone');
 
 const introText1 = document.querySelector('.intro-text');
 const introText2 = document.querySelector('.intro-text2');
@@ -49,7 +49,7 @@ window.addEventListener('mousemove', (e) => {
     introText2.style.opacity = '0';
     introText2.style.transform = 'translateX(0)';
   }
-});
+}); */
 
 //Boton para volver arriba al menu
   const backToTopBtn = document.getElementById('backToTop');
@@ -97,7 +97,7 @@ document.querySelectorAll('.scroll-flip-down').forEach(el => {
 });
 
 //Animación de servicios show room portfolio
-const container = document.querySelector('.projects_cards__show_container');
+/*const container = document.querySelector('.projects_cards__show_container');
 const scrollAmount = 350;
 
 document.querySelector('.left-arrow').addEventListener('click', () => {
@@ -106,4 +106,66 @@ document.querySelector('.left-arrow').addEventListener('click', () => {
 
 document.querySelector('.right-arrow').addEventListener('click', () => {
   container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+});*/
+
+//Animación skills tipo radio
+document.addEventListener("DOMContentLoaded", () => {
+  const circles = document.querySelectorAll('.circle');
+
+  const totalDots = 50;
+  const rotationStep = 360 / totalDots;
+
+  // Crear puntos una sola vez al cargar la página
+  circles.forEach(circle => {
+    for (let i = 0; i < totalDots; i++) {
+      const point = document.createElement('div');
+      point.classList.add('points');
+      point.style.setProperty('--i', i + 1);
+      point.style.transform = `rotate(${i * rotationStep}deg) translateY(-50px)`;
+      circle.appendChild(point);
+    }
+  });
+
+  // Observer para activar marcado cuando entren al viewport
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const circle = entry.target;
+        const markedDots = parseInt(circle.getAttribute('data-dots')) || 0;
+        const allPoints = circle.querySelectorAll('.points');
+
+        // Añadir clase .marked solo a los necesarios
+        for (let i = 0; i < markedDots && i < totalDots; i++) {
+          allPoints[i].classList.add('marked');
+        }
+
+        observer.unobserve(circle); // Detener observación tras animación
+      }
+    });
+  }, {
+    threshold: 0.01 // Con que entre un píxel, se activa
+  });
+
+  // Observar cada círculo
+  circles.forEach(circle => observer.observe(circle));
+});
+
+//Animacion barras habilidades cada vez que se muestran en el viewport se animan
+document.addEventListener("DOMContentLoaded", () => {
+  const bars = document.querySelectorAll(
+    '.skill-bar .bar .react, .skill-bar .bar .motion, .skill-bar .bar .color, .skill-bar .bar .digitales, .skill-bar .bar .tipografia, .skill-bar .bar .branding, .skill-bar .bar .adobe'
+  );
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting > 0) {
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  bars.forEach(bar => {
+    observer.observe(bar);
+  });
 });
