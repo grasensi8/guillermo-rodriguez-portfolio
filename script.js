@@ -97,13 +97,13 @@ document.querySelectorAll('.scroll-flip-down').forEach(el => {
 });
 
 //Animación de servicios show room portfolio
-  const container = document.querySelector('.projects_cards__show_container');
-  const scrollAmount = 350;
+const container = document.querySelector('.projects_cards__show_container');
+const scrollAmount = 350;
 
-  document.querySelector('.left-arrow').addEventListener('click', () => {
-    container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-  });
+document.querySelector('.left-arrow').addEventListener('click', () => {
+  container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+});
 
-  document.querySelector('.right-arrow').addEventListener('click', () => {
-    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-  });
+document.querySelector('.right-arrow').addEventListener('click', () => {
+  container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+});
