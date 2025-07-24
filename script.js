@@ -169,3 +169,49 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(bar);
   });
 });
+
+//Contador numérico para seccion estadisticas
+ const counters = document.querySelectorAll('.parragragh_style7');
+  const duration = 4000; // tiempo de conteo
+  const delayBetweenCycles = 3000; // pausa entre ciclos
+  const frameRate = 80; // cada cuánto se actualiza
+
+  function startSynchronizedCounting() {
+    const stepsMap = new Map();
+    const maxSteps = Math.ceil(duration / frameRate);
+
+    // Inicializa todos a 0 y calcula paso por contador
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      const step = Math.ceil(target / maxSteps);
+      counter.textContent = '0';
+      stepsMap.set(counter, { target, current: 0, step });
+    });
+
+    let frame = 0;
+
+    function updateCounters() {
+      frame++;
+      stepsMap.forEach((data, counter) => {
+        if (data.current < data.target) {
+          data.current += data.step;
+          if (data.current > data.target) data.current = data.target;
+          counter.textContent = data.current + "+";
+        }
+      });
+
+      if (frame < maxSteps) {
+        setTimeout(updateCounters, frameRate);
+      } else {
+        setTimeout(() => {
+          startSynchronizedCounting(); // vuelve a empezar todos juntos
+        }, delayBetweenCycles);
+      }
+    }
+
+    updateCounters();
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    startSynchronizedCounting();
+  });

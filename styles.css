@@ -1153,3 +1153,88 @@ h3 {
   from{ background-color: #1c1f1e; box-shadow: none;}
   to{background-color: var(--colorPrimario); box-shadow:  0 0 12px #b5ebda;}
 }
+
+/* Página trayectoria*/
+.parragragh_style5 {
+  font-size: var(--bodySize);
+  color: var(--colorWhite);
+  font-family: var(--fontSecundary);
+  margin: 0 auto;
+  padding: 0;
+  line-height: 160%;
+  font-weight: 450;
+  max-width: 800px;
+}
+
+.parragragh_style6 {
+  font-size: var(--bodySize2);
+  color: var(--colorGrey);
+  font-family: var(--fontSecundary);
+  margin: 10px auto;
+  padding-bottom: 10px;
+  line-height: 180%;
+  font-weight: 400;
+  max-width: 800px;
+}
+
+.container-formation {
+  display: flex;
+  gap: 100px;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/*Luz estática decoración*/
+.light3-position {
+  position: relative;
+  margin: 100px auto;
+  height: 600px;
+  width: 100%;
+}
+
+.light3 {
+  position: absolute;
+  animation: moverX 16s infinite alternate linear;
+  border-radius: 50%;
+  size: 120px;
+  filter: blur(125px);
+  width: 650px;
+  height: 650px;
+  z-index: -10;
+  opacity: 0.5;
+  left: -650px;
+  top: 0;
+  background-color: #4CC2B2;
+  overflow-x: hidden;
+}
+
+.container-stadistics {
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.card-stadistics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 390px;
+}
+
+.parragragh_style7 {
+  font-size: 100px;
+  color: var(--colorPrimario);
+  font-family: var(--fontPrimary);
+  font-weight: 750;
+}
+
+.parragragh_style8 {
+  font-size: var(--bodySize2);
+  color: var(--colorPrimario);
+  font-family: var(--fontSecundary);
+  line-height: 180%;
+  font-weight: 400;
+  max-width: 800px;
+}
