@@ -1238,3 +1238,42 @@ h3 {
   font-weight: 400;
   max-width: 800px;
 }
+
+.services_band_container2 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 100px;
+  color: var(--colorWhite);
+  text-align: center;
+  font-weight: 500;
+  padding-top: 0px;
+  padding-bottom: 30px;
+}
+
+.services_band_container2 p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-direction: column;
+  color: var(--colorWhite);
+  transition: transform 0.4s ease-in-out;
+}
+
+.services_band_container2 a {
+  text-decoration: none;
+}
+
+.services_band_container2 p:hover {
+  color: var(--colorPrimario);
+  transform: scale(1.10);
+}
+
+#grafico, #ux, #branding, #video, #web {
+  scroll-margin-top: 200px; /* ajusta según la altura de tu header */
+}
