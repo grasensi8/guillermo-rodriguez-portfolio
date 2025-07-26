@@ -819,6 +819,13 @@ p.parragragh_style3 a:hover {
 .icon-after-effects { background-image: url("images/after\ effects.png"); }
 .icon-xd { background-image: url("images/xd.png"); }
 
+.icon-unido { background-image: url("images/UNIDO_logo.png"); }
+.icon-flymobile { background-image: url("images/flymobile-logo.png"); }
+.icon-repsol { background-image: url("images/repsol-logo.png"); }
+.icon-pp { background-image: url("images/p&p-logo.png"); }
+.icon-suprive { background-image: url("images/suprive-logo.png"); }
+.icon-trabajar { background-image: url("images/trabajarporelmundo-logo.png"); }
+
 @keyframes scrollIcons {
   from {
     transform: translateX(0);
@@ -1181,7 +1188,6 @@ h3 {
   display: flex;
   gap: 100px;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 
 /*Luz estática decoración*/
@@ -1275,4 +1281,24 @@ h3 {
 
 #grafico, #ux, #branding, #video, #web {
   scroll-margin-top: 200px; /* ajusta según la altura de tu header */
+}
+
+/*Banda animada de marcas que colaboraro nconmigo*/
+.tech-band2 {
+  display: inline-block;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #1c1f1e;
+  padding: 50px 0;
+  margin: 60px auto 90px auto;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.tech-track2 {
+  display: flex;
+  justify-content: center;
+  width: max-content;
+  animation: scrollIcons 50s linear infinite;
+  gap: 80px;
 }
