@@ -806,25 +806,29 @@ p.parragragh_style3 a:hover {
   pointer-events: visible;
 }
 
-.icon-html { background-image: url("images/html.png"); }
-.icon-css { background-image: url("images/css-3.png"); }
-.icon-figma { background-image: url("images/figma.png"); }
-.icon-ilustrator { background-image: url("images/ilustrator.png"); }
-.icon-indesign { background-image: url("images/indesign.png"); }
-.icon-js { background-image: url("images/js.png"); }
-.icon-photoshop { background-image: url("images/photoshop.png"); }
-.icon-github { background-image: url("images/github.png"); }
-.icon-premiere { background-image: url("images/premiere.png"); }
-.icon-visual-studio-code { background-image: url("images/Visual_Studio_Code.png"); }
-.icon-after-effects { background-image: url("images/after\ effects.png"); }
-.icon-xd { background-image: url("images/xd.png"); }
+.icon-html { background-image: url("images/logos_software/html.png"); }
+.icon-css { background-image: url("images/logos_software/css-3.png"); }
+.icon-figma { background-image: url("images/logos_software/figma.png"); }
+.icon-ilustrator { background-image: url("images/logos_software/ilustrator.png"); }
+.icon-indesign { background-image: url("images/logos_software/indesign.png"); }
+.icon-js { background-image: url("images/logos_software/js.png"); }
+.icon-photoshop { background-image: url("images/logos_software/photoshop.png"); }
+.icon-github { background-image: url("images/logos_software/github.png"); }
+.icon-premiere { background-image: url("images/logos_software/premiere.png"); }
+.icon-visual-studio-code { background-image: url("images/logos_software/Visual_Studio_Code.png"); }
+.icon-after-effects { background-image: url("images/logos_software/after-effects.png"); }
+.icon-xd { background-image: url("images/logos_software/xd.png"); }
 
-.icon-unido { background-image: url("images/UNIDO_logo.png"); }
-.icon-flymobile { background-image: url("images/flymobile-logo.png"); }
-.icon-repsol { background-image: url("images/repsol-logo.png"); }
-.icon-pp { background-image: url("images/p&p-logo.png"); }
-.icon-suprive { background-image: url("images/suprive-logo.png"); }
-.icon-trabajar { background-image: url("images/trabajarporelmundo-logo.png"); }
+.icon-repsol { background-image: url("images/logos_marcas/repsol-logo-512px.png"); filter: grayscale(100%);}
+.icon-unido { background-image: url("images/logos_marcas/unido-logo-512px.png"); filter: brightness(0) invert(1); }
+.icon-pp { background-image: url("images/logos_marcas/pp-logo-512px.png"); filter: brightness(0) invert(1); }
+.icon-workana { background-image: url("images/logos_marcas/workana-logo-512px.png"); filter: grayscale(100%); }
+.icon-aprender { background-image: url("images/logos_marcas/aprender-logo-512px.png"); filter: brightness(0) invert(1); }
+.icon-flymobile { background-image:url("images/logos_marcas/flymobile-logo-512px.png"); filter: brightness(0) invert(1); }
+.icon-suprive { background-image: url("images/logos_marcas/suprive-logo-512px.png"); filter: brightness(0) invert(1); }
+.icon-trabajar { background-image: url("images/logos_marcas/trabajar-logo-512px.png"); filter: brightness(0) invert(1); ;}
+.icon-david { background-image: url("images/logos_marcas/david-logo-512px.png"); filter: brightness(0) invert(1); }
+.icon-who { background-image: url("images/logos_marcas/who-logo-512px.png"); filter: brightness(0) invert(1); }
 
 @keyframes scrollIcons {
   from {
