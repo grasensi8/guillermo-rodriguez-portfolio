@@ -17,41 +17,42 @@ document.addEventListener('mouseenter', () => {
   cursor.style.opacity = '1';
 });
 
-//Mensaje oculto1 en la foto header
-/*const photoZone = document.getElementById('photoZone');
-
+//Mensajes ocultos en la foto del index
+const photoZone = document.getElementById('photoZone');
 const introText1 = document.querySelector('.intro-text');
 const introText2 = document.querySelector('.intro-text2');
 
-window.addEventListener('mousemove', (e) => {
-  const rect = photoZone.getBoundingClientRect();
+if (photoZone && introText1 && introText2) {
+  window.addEventListener('mousemove', (e) => {
+    const rect = photoZone.getBoundingClientRect();
 
-  const zoneLeft = rect.left + window.scrollX;
-  const zoneTop = rect.top + window.scrollY;
-  const zoneRight = zoneLeft + rect.width;
-  const zoneBottom = zoneTop + rect.height;
+    const zoneLeft = rect.left + window.scrollX;
+    const zoneTop = rect.top + window.scrollY;
+    const zoneRight = zoneLeft + rect.width;
+    const zoneBottom = zoneTop + rect.height;
 
-  const mouseX = e.pageX;
-  const mouseY = e.pageY;
+    const mouseX = e.pageX;
+    const mouseY = e.pageY;
 
-  const inZone = mouseX > zoneLeft && mouseX < zoneRight && mouseY > zoneTop && mouseY < zoneBottom;
+    const inZone = mouseX > zoneLeft && mouseX < zoneRight && mouseY > zoneTop && mouseY < zoneBottom;
 
-  if (inZone) {
-    introText1.style.opacity = '1';
-    introText1.style.transform = 'translateX(333px)';  // mueve a la derecha
+    if (inZone) {
+      introText1.style.opacity = '1';
+      introText1.style.transform = 'translateX(333px)';
 
-    introText2.style.opacity = '1';
-    introText2.style.transform = 'translateX(-366px)'; // mueve a la izquierda
-  } else {
-    introText1.style.opacity = '0';
-    introText1.style.transform = 'translateX(0)';
+      introText2.style.opacity = '1';
+      introText2.style.transform = 'translateX(-366px)';
+    } else {
+      introText1.style.opacity = '0';
+      introText1.style.transform = 'translateX(0)';
 
-    introText2.style.opacity = '0';
-    introText2.style.transform = 'translateX(0)';
-  }
-}); */
+      introText2.style.opacity = '0';
+      introText2.style.transform = 'translateX(0)';
+    }
+  });
+}
 
-//Boton para volver arriba al menu
+//Botón para volver arriba al menu
   const backToTopBtn = document.getElementById('backToTop');
 
   window.addEventListener('scroll', () => {
@@ -97,16 +98,20 @@ document.querySelectorAll('.scroll-flip-down').forEach(el => {
 });
 
 //Animación de servicios show room portfolio
-/*const container = document.querySelector('.projects_cards__show_container');
-const scrollAmount = 350;
+const container = document.querySelector('.projects_cards__show_container');
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+const scrollAmount = 600;
 
-document.querySelector('.left-arrow').addEventListener('click', () => {
-  container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-});
+if (container && leftArrow && rightArrow) {
+  leftArrow.addEventListener('click', () => {
+    container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
 
-document.querySelector('.right-arrow').addEventListener('click', () => {
-  container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-});*/
+  rightArrow.addEventListener('click', () => {
+    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+}
 
 //Animación skills tipo radio
 document.addEventListener("DOMContentLoaded", () => {

@@ -456,7 +456,7 @@ footer {
 .hero_photo {
   max-width: 525px;
   height: auto;
-  mask-image: linear-gradient(black 80%, transparent);
+  mask-image: linear-gradient(black 85%, transparent);
   filter: drop-shadow(0 0 20px var(--colorTerciary));
   animation: aparecer 1s ease-out forwards;
   padding: 0 20px; /* Añade espacio horizontal a la izquierda y derecha */
@@ -829,6 +829,17 @@ p.parragragh_style3 a:hover {
 .icon-trabajar { background-image: url("images/logos_marcas/trabajar-logo-512px.png"); filter: brightness(0) invert(1); ;}
 .icon-david { background-image: url("images/logos_marcas/david-logo-512px.png"); filter: brightness(0) invert(1); }
 .icon-who { background-image: url("images/logos_marcas/who-logo-512px.png"); filter: brightness(0) invert(1); }
+
+.icon-repsol:hover { filter: grayscale(0%);}
+.icon-unido:hover { filter: none; }
+.icon-pp:hover { filter: none; }
+.icon-workana:hover { filter: grayscale(0%);}
+.icon-aprender:hover { filter: none; }
+.icon-flymobile:hover { filter: none; }
+.icon-suprive:hover { filter: none; }
+.icon-trabajar:hover { filter: none; }
+.icon-david:hover { filter: none; }
+.icon-who:hover { filter: none; }
 
 @keyframes scrollIcons {
   from {
