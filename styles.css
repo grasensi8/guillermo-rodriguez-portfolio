@@ -1350,7 +1350,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 50px;
-  row-gap:100px;
+  row-gap:50px;
 }
 
 .project_card  {
