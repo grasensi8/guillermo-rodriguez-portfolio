@@ -1176,7 +1176,7 @@ h3 {
   to{background-color: var(--colorPrimario); box-shadow:  0 0 12px #b5ebda;}
 }
 
-/* Página trayectoria*/
+/* Página trayectoria */
 .parragragh_style5 {
   font-size: var(--bodySize);
   color: var(--colorWhite);
@@ -1260,6 +1260,7 @@ h3 {
   max-width: 800px;
 }
 
+/* Página servicios */
 .services_band_container2 {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -1298,7 +1299,8 @@ h3 {
   scroll-margin-top: 200px; /* ajusta según la altura de tu header */
 }
 
-/*Banda animada de marcas que colaboraro nconmigo*/
+/* Página proyectos */
+/*Banda animada de marcas que colaboraron conmigo*/
 .tech-band2 {
   display: inline-block;
   justify-content: center;
@@ -1316,4 +1318,74 @@ h3 {
   width: max-content;
   animation: scrollIcons 50s linear infinite;
   gap: 80px;
+}
+
+.parragragh_style9 {
+  font-size: 25px;
+  color: var(--colorWhite);
+  font-family: var(--fontSecundary);
+  margin: 0;
+  padding: 0;
+  line-height: 160%;
+  font-weight: 400;
+  max-width: 800px;
+}
+
+.parragragh_style10 {
+  font-size: 25px;
+  color: var(--colorPrimario);
+  font-family: var(--fontSecundary);
+  margin: 0;
+  padding: 0;
+  line-height: 160%;
+  letter-spacing: 2px;
+  font-weight: 400;
+  max-width: 800px;
+}
+
+.flex_container_projects {
+  margin-top: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  row-gap:100px;
+}
+
+.project_card  {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image_wrapper {
+  width: 100%;
+  height: 400px; /* o fija si prefieres */
+  overflow: hidden;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image_project_container {
+  width: 100%;
+  height: 400px;
+  margin: 0;
+  display: flex;
+  object-fit: cover; 
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s linear;
+  align-items: flex-start;
+}
+
+.image_wrapper:hover .image_project_container {
+  transform: scale(1.08);
+}
+
+.image_wrapper:hover {
+  box-shadow: 0 0px 25px rgba(181, 235, 218, 0.446);
+}
+
+#vertodos {
+  scroll-margin-top: 200px; /* ajusta según la altura de tu header */
 }
