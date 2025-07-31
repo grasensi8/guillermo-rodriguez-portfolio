@@ -1346,7 +1346,7 @@ h3 {
 }
 
 .flex_container_projects {
-  margin-top: 200px;
+  margin-top: 150px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 50px;
@@ -1399,4 +1399,26 @@ h3 {
   display: flex;
   flex-direction: column;
   background-color: #1c1f1e; /* igual que el fondo de la tarjeta */
+}
+
+.vertodos_proyectos {
+  text-align: center; 
+  color: var(--colorWhite); 
+  font-size: 30px; 
+  font-weight: 400;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 220px;
+}
+
+.vertodos_proyectos a i {
+  font-size: 30px;
+}
+
+.vertodos_proyectos:hover {
+  color: var(--colorPrimario); 
 }
