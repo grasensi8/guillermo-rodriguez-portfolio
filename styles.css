@@ -578,6 +578,10 @@ a.button-primary {
   color: var(--colorSecundario);
 }
 
+.bx-right-arrow-alt {
+  font-size: 32px;
+}
+
 a.button-primary:hover {
   transform: scale(1.1);
   box-shadow: 0 0 12px rgba(181, 235, 218, 0.6);
