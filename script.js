@@ -17,6 +17,27 @@ document.addEventListener('mouseenter', () => {
   cursor.style.opacity = '1';
 });
 
+//Cambiar el cursor al original al modificar el tamaño de pantalla
+if (window.innerWidth > 1024) {
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.top = e.clientY + 'px';
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.opacity = '1'; // visible al mover
+  });
+
+  document.addEventListener('mouseleave', () => {
+    cursor.style.opacity = '0';
+  });
+
+  document.addEventListener('mouseenter', () => {
+    cursor.style.opacity = '1';
+  });
+} else {
+  // Si es móvil/tablet, ocultar el div y dejar cursor original
+  cursor.style.display = "none";
+  document.body.style.cursor = "auto";
+}
+
 //Mensajes ocultos en la foto del index
 const photoZone = document.getElementById('photoZone');
 const introText1 = document.querySelector('.intro-text');
@@ -219,4 +240,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("DOMContentLoaded", () => {
     startSynchronizedCounting();
+  });
+
+
+  //Dispositivos de menos de 1024px
+  
+  //Dispositivos móviles
+  //Menú
+  const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+
+  menuToggle.addEventListener("click", () => {
+  menu.classList.toggle("active");
   });
