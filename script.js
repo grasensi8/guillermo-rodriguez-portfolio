@@ -269,3 +269,10 @@ document.addEventListener("DOMContentLoaded", () => {
   menuToggle.addEventListener("click", () => {
   menu.classList.toggle("active");
   });
+
+    const toggle = document.getElementById("menu-toggle");
+  
+  toggle.addEventListener("click", () => {
+    toggle.classList.toggle("active");
+    toggle.textContent = toggle.classList.contains("active") ? "✖" : "☰";
+  });
