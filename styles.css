@@ -642,7 +642,7 @@ a.button-primary:hover {
 }
 
 .bxs-brush, .bxs-layout, .bx-code, .bx-movie, .bxs-crown {
-  font-size: 44px;
+  font-size: 2.5rem;
 }
 
 /* Animación que cambia color y escala */
@@ -1694,8 +1694,14 @@ h3 {
 
   .services_band_container2 {
    flex-wrap: wrap;
-   font-size: 26px; 
-   gap: 60px;
+   font-size: 1.5rem;
+   gap: 40px;
+  }
+
+  .services_band_container2 p {
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
   }
 
   .socialMedia2 {
@@ -1750,5 +1756,9 @@ h3 {
 
   .vertodos_proyectos {
     font-size: 1.5rem;
+  }
+
+  .bxs-brush, .bxs-layout, .bx-code, .bx-movie, .bxs-crown {
+  font-size: 2rem;
   }
 }
