@@ -71,7 +71,7 @@ h1, h2, h3, h4 {
   position: absolute;
   border-radius: 50%;
   size: 120px;
-  animation: moverX 16s infinite alternate ease-in-out;
+  /*animation: moverX 16s infinite alternate ease-in-out;*/
   filter: blur(125px);
   width: 650px;
   height: 650px;
@@ -79,7 +79,7 @@ h1, h2, h3, h4 {
   opacity: 0.5;
   background-color: #4CC2B2;
   top: -400px;
-  left: -295px;
+  left: 500px;
   overflow-x: hidden;
 }
 
@@ -187,9 +187,6 @@ nav.scrolled {
   cursor: pointer;
   color: var(--colorWhite);
   display: none; /* solo visible en móvil */
-  position: absolute;
-  left: 20px;
-  top: 20px;
   z-index: 1100;
 }
 
@@ -403,14 +400,14 @@ footer {
   position: absolute;
   border-radius: 50%;
   size: 120px;
-  animation: moverX 16s infinite alternate ease-in-out;
+  /*animation: moverX 16s infinite alternate ease-in-out;*/
   filter: blur(125px);
   width: 650px;
   height: 650px;
   opacity: 0.5;
   background-color: #4CC2B2;
   bottom: -425px;
-  left: -295px;
+  left: 500px;
   pointer-events: none;
   overflow: hidden;
 }
@@ -1236,7 +1233,7 @@ h3 {
 
 .light3 {
   position: absolute;
-  animation: moverX 16s infinite alternate linear;
+  /*animation: moverX 16s infinite alternate linear;*/
   border-radius: 50%;
   size: 120px;
   filter: blur(125px);
@@ -1244,7 +1241,7 @@ h3 {
   height: 650px;
   z-index: -10;
   opacity: 0.5;
-  left: -650px;
+  left: 200px;
   top: 0;
   background-color: #4CC2B2;
   overflow-x: hidden;
@@ -1353,7 +1350,7 @@ h3 {
 }
 
 .parragragh_style10 {
-  font-size: 25px;
+  font-size: 1.5rem;
   color: var(--colorPrimario);
   font-family: var(--fontSecundary);
   margin: 0;
@@ -1420,7 +1417,7 @@ h3 {
 .vertodos_proyectos {
   text-align: center; 
   color: var(--colorWhite); 
-  font-size: 30px; 
+  font-size: 1.75rem; 
   font-weight: 400;
   text-decoration: none;
   display: flex;
@@ -1446,6 +1443,15 @@ h3 {
 
 .section_space11 {
     margin-top: 70px;
+}
+
+.h1_margin_top {
+  margin-top: 260px;
+}
+
+.h2_proyectos_margen {
+  text-align: center; 
+  margin-bottom: 80px;
 }
 
 @media (max-width: 1024px) {
@@ -1533,9 +1539,13 @@ h3 {
 
   .container-main {
   margin: 40px auto 0 auto;  /* margen superior más pequeño */
-  padding: 20px 8px;         /* padding reducido al mínimo */
-  width: 95%;                 /* ocupar casi todo el ancho disponible */
+  padding: 20px 40px;         /* padding reducido al mínimo */
+  width: 100%;               
   box-sizing: border-box;
+  }
+
+  nav {
+    position: static;
   }
 
   nav.scrolled {
@@ -1566,7 +1576,7 @@ h3 {
 
   .menu-toggle {
     display: block; /* 🔥 visible solo en móvil */
-    margin-left: 1rem;
+    margin: 1rem;
   }
 
   .photo_container {
@@ -1574,17 +1584,17 @@ h3 {
   }
 
   .socialMedia {
-    position: static;
-    padding-right: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
     margin: 0;
     gap: 2.5rem;
-    background-color: transparent !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
     flex-direction: row;
-    justify-content: flex-end;
-    align-items: center !important;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   .bxl.bx-behance {
@@ -1631,7 +1641,7 @@ h3 {
   .services_band_container {
     font-size: 1.5rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 60px;
     padding: 20px auto;
   }
@@ -1664,5 +1674,81 @@ h3 {
   .space_herramientas {
   margin-top: 100px; 
   margin-bottom: 40px;
+  }
+
+  .h1_margin_top {
+  margin-top: 100px;
+  }
+
+  .flex_container_projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 0px;
+  }
+
+  .h2_proyectos_margen {
+  margin-top: 80px;
+  }
+
+  .services_band_container2 {
+   flex-wrap: wrap;
+   font-size: 26px; 
+   gap: 60px;
+  }
+
+  .socialMedia2 {
+    border: none;
+    margin-left: 0;
+    margin-top: 1rem;
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  .parragragh_style7 {
+    font-size: 5rem;
+  }
+
+  .projects_cards__show_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    margin: 0;
+    gap: 60px;
+    position: static;
+    width: auto;
+  }
+
+  .parragragh_style10 {
+    font-size: 1.5rem;
+  }
+
+  .parragragh_style9 {
+    font-size: 1.25rem;
+  }
+
+  .project_card {
+    max-width: 350px;
+    padding: 0;
+  }
+
+  .image_wrapper {
+    height: 300px;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .image_project_container {
+    height: 300px;
+    padding: 0 30px;
+  }
+
+  .project_card_text {
+    padding: 20px 30px;
+  }
+
+  .vertodos_proyectos {
+    font-size: 1.5rem;
   }
 }

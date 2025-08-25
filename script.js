@@ -33,6 +33,7 @@ if (window.innerWidth > 1024) {
     cursor.style.opacity = '1';
   });
 } else {
+
   // Si es móvil/tablet, ocultar el div y dejar cursor original
   cursor.style.display = "none";
   document.body.style.cursor = "auto";
@@ -77,10 +78,12 @@ if (photoZone && introText1 && introText2) {
   const backToTopBtn = document.getElementById('backToTop');
 
   window.addEventListener('scroll', () => {
+    if (window.innerWidth > 768) { // solo en escritorio
     if (window.scrollY > 1000) {
       backToTopBtn.classList.add('show');
     } else {
       backToTopBtn.classList.remove('show');
+    }
     }
   });
 
@@ -93,11 +96,16 @@ if (photoZone && introText1 && introText2) {
 
 //Menú fijo y con background
 const nav = document.querySelector('nav');
+
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 100) { 
-    nav.classList.add('scrolled');
+  if (window.innerWidth > 768) { // solo en escritorio
+    if (window.scrollY > 100) { 
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
   } else {
-    nav.classList.remove('scrolled');
+    nav.classList.remove('scrolled'); // en móvil, quitar siempre
   }
 });
 
@@ -124,14 +132,22 @@ const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
 const scrollAmount = 600;
 
-if (container && leftArrow && rightArrow) {
-  leftArrow.addEventListener('click', () => {
-    container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-  });
 
-  rightArrow.addEventListener('click', () => {
-    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-  });
+if (container && leftArrow && rightArrow) {
+  if (window.innerWidth > 768) {
+    // Solo en escritorio
+    leftArrow.addEventListener('click', () => {
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    rightArrow.addEventListener('click', () => {
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+  } else {
+    // En móviles, opcional: ocultar los botones
+    leftArrow.style.display = 'none';
+    rightArrow.style.display = 'none';
+  }
 }
 
 //Animación skills tipo radio
