@@ -60,16 +60,16 @@ if (photoZone && introText1 && introText2) {
 
     if (inZone) {
       introText1.style.opacity = '1';
-      introText1.style.transform = 'translateX(333px)';
+      introText1.style.transform = 'translateX(calc(-50% - 333px))';
 
       introText2.style.opacity = '1';
-      introText2.style.transform = 'translateX(-366px)';
+      introText2.style.transform = 'translateX(calc(-50% + 360px))';
     } else {
       introText1.style.opacity = '0';
-      introText1.style.transform = 'translateX(0)';
+      introText1.style.transform = 'translateX(calc(-50% - 333px))';
 
       introText2.style.opacity = '0';
-      introText2.style.transform = 'translateX(0)';
+      introText2.style.transform = 'translateX(calc(-50% + 360px))';
     }
   });
 }
