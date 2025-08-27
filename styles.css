@@ -339,8 +339,8 @@ nav.scrolled {
   display: flex;
   white-space: nowrap;
   align-content: center;
-  justify-content: left;
-  animation: mover1 35s linear infinite;
+  justify-content: center;
+  animation: mover1 90s linear infinite;
 }
 
 .bloque2 {
@@ -364,10 +364,10 @@ nav.scrolled {
 
 @keyframes mover1 {
   0% {
-    transform: translateX(35%);
+    transform: translateX(30%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(-100%);
   }
 }
 
@@ -612,33 +612,37 @@ a.button-primary:hover {
 
 .fondo_banner {
   background-color: #1c1f1e;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  padding: 40px 400px;
+  width: 100vw;   /* ancho total del viewport */
+  margin-left: calc(-50vw + 50%); /* truco para sacarlo del contenedor */
+  padding: 40px 0;
+  text-align: center;
 }
 
 .services_band_container {
   margin-top: 30px;
   margin-bottom: 30px;
-  font-size: 30px;
+  font-size: 26px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 100px;
+  row-gap: 60px;
   color: var(--colorWhite);
   text-align: center;
   font-weight: 500;
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .services_band_container p {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
-  flex-direction: column;
+  gap: 14px;
+  flex-direction: column-reverse;
   animation-name: colorScaleAnim;
   animation-duration: 5s;  /* duración total de la animación por cada elemento */
   animation-iteration-count: infinite;
@@ -1236,8 +1240,8 @@ h3 {
 /*Luz estática decoración*/
 .light3-position {
   position: relative;
-  margin: 100px auto;
-  height: 600px;
+  margin: 160px auto 60px auto;
+  height: 500px;
   width: 100%;
 }
 
@@ -1247,20 +1251,24 @@ h3 {
   border-radius: 50%;
   size: 120px;
   filter: blur(125px);
-  width: 650px;
-  height: 650px;
+  width: 600px;
+  height: 600px;
   z-index: -10;
   opacity: 0.5;
-  left: 200px;
+  left: 50%;
+  transform: translateX(-50%);
   top: 0;
   background-color: #4CC2B2;
   overflow-x: hidden;
 }
 
 .container-stadistics {
-  height: 600px;
+  height: 500px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 100px;
+  align-items: center;
+  flex-wrap: wrap;
   margin: 0 auto;
 }
 
@@ -1269,11 +1277,10 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 390px;
 }
 
 .parragragh_style7 {
-  font-size: 100px;
+  font-size: 90px;
   color: var(--colorPrimario);
   font-family: var(--fontPrimary);
   font-weight: 750;
@@ -1452,7 +1459,7 @@ h3 {
 }
 
 .section_space11 {
-    margin-top: 70px;
+    margin-top: 250px;
 }
 
 .h1_margin_top {
@@ -1521,12 +1528,6 @@ h3 {
     padding: 30px 10px;        /* padding reducido */
   }
 
-  nav.scrolled {
-    background-color: rgba(28, 31, 30, 0.85); /* más opaco */
-    backdrop-filter: blur(4px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-  }
-
   .menu {
     gap: 2.5rem; /* reducimos espacio */
   }
@@ -1553,12 +1554,15 @@ h3 {
   box-sizing: border-box;
   }
 
-  nav {
-    position: static;
+  nav.scrolled {
+    position: static;     /* deja de estar fixed */
+    backdrop-filter: none;
+    box-shadow: none;
+    background-color: transparent;
   }
 
-  nav.scrolled {
-    display: none !important;
+  nav {
+    position: static;
   }
 
   .menu li span {
@@ -1617,10 +1621,11 @@ h3 {
 
   .cinta {
     margin-top: 0px;
+    animation: mover 45s linear infinite;
   }
 
   .title_content {
-    margin-top: 100px;
+    margin-top: 200px;
   }
 
   .subtitle_content {
@@ -1640,7 +1645,7 @@ h3 {
   }
 
   .section_space {
-    margin-top: 70px;
+    margin-top: 220px;
   }
 
   .section_space11 {
@@ -1653,10 +1658,8 @@ h3 {
 
   .services_band_container {
     font-size: 1.5rem;
-    display: grid;
-    grid-template-columns: 1fr;
     gap: 60px;
-    padding: 20px auto;
+    padding: 20px;
   }
 
   .services_band_container p {
@@ -1666,11 +1669,7 @@ h3 {
   }
 
   .fondo_banner {
-    padding: 20px 80px;
-  }
-
-  .light3 {
-    display: none; /* se oculta la luz decorativa */
+    padding: 60px 0px;
   }
 
   .container-stadistics { 
@@ -1685,7 +1684,7 @@ h3 {
   }
 
   .space_herramientas {
-  margin-top: 100px; 
+  margin-top: 200px; 
   margin-bottom: 40px;
   }
 
@@ -1726,14 +1725,15 @@ h3 {
   }
 
   .projects_cards__show_container {
+    padding: 40px 0 40px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center; 
     margin: 0;
     gap: 60px;
+    width: 100%;
     position: static;
-    width: auto;
   }
 
   .parragragh_style10 {
@@ -1746,7 +1746,7 @@ h3 {
   }
 
   .project_card {
-    max-width: 350px;
+    max-width: 340px;
     padding: 0;
   }
 
@@ -1787,6 +1787,10 @@ h3 {
     gap: 50px;
   }
 
+  .cinta2 {
+    animation: mover1 35s linear infinite forwards;
+  }
+
   .skill-main {
     display: inline-block;
   }
@@ -1798,9 +1802,5 @@ h3 {
   .skill-left .skill-bar .info {
     padding: 0;
     align-items: normal;
-  }
-
-  a.button-primary {
-    width: 100%;
   }
 }
