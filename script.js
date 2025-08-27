@@ -126,7 +126,7 @@ document.querySelectorAll('.scroll-flip-down').forEach(el => {
   observer.observe(el);
 });
 
-//Animación de servicios show room portfolio
+/*//Animación de servicios show room portfolio
 const container = document.querySelector('.projects_cards__show_container');
 const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
@@ -137,18 +137,18 @@ if (container && leftArrow && rightArrow) {
   if (window.innerWidth > 768) {
     // Solo en escritorio
     leftArrow.addEventListener('click', () => {
-      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      container.scrollBy({ left: -scrollAmount });
     });
 
     rightArrow.addEventListener('click', () => {
-      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      container.scrollBy({ left: scrollAmount });
     });
   } else {
     // En móviles, opcional: ocultar los botones
     leftArrow.style.display = 'none';
     rightArrow.style.display = 'none';
   }
-}
+}*/
 
 //Animación skills tipo radio
 document.addEventListener("DOMContentLoaded", () => {

@@ -425,7 +425,7 @@ footer {
 
 /* Subtítulo de Encabezado principal en movimiento */
 .subtitle_content {
-  max-width: 4000px;
+  width: 100%;
   overflow: hidden;
   background: transparent;
   white-space: nowrap;
@@ -953,16 +953,12 @@ h3 {
 }
 
 .projects_cards__show_container {
-  overflow-x: auto;
-  scroll-behavior: smooth;
   scrollbar-width: none;
   display: flex;
-  width: 100vw;
-  position: relative;
-  left: calc(-50vw + 50%);
+  flex-wrap: wrap;
   padding: 80px 0px;
+  justify-content: center;
   gap: 50px;
-  justify-content: left;
 }
 
 .projects_cards__show_container li {
@@ -1788,7 +1784,7 @@ h3 {
   }
 
   .cinta2 {
-    animation: mover1 35s linear infinite forwards;
+    animation: mover1 60s linear infinite forwards;
   }
 
   .skill-main {
