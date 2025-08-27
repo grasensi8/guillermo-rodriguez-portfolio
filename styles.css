@@ -48,7 +48,6 @@ body {
   font-family: var(--fontSecundary);
   font-size: 16px;
   background-color: var(--colorSecundario);
-  overflow: auto;
   color: var(--colorWhite);
 }
 
@@ -100,6 +99,13 @@ nav {
   transition: background-color 0.2s ease, backdrop-filter 0.2s ease, box-shadow 0.2s ease;
 }
 
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
 nav.scrolled {
   position: fixed;
   top: 0;
@@ -116,11 +122,10 @@ nav.scrolled {
   justify-content: center;
   gap: 4rem;
   align-items: center;
-  flex-wrap: nowrap;
   list-style: none;
   margin: 1rem auto;
   padding: 0.5rem;
-  width: 85%;
+  max-width: 1200px;
   box-sizing: border-box;
 }
 
@@ -275,7 +280,7 @@ nav.scrolled {
 
 /* Encabezado principal en movimiento */
 .title_content {
-  max-width: 2000px; 
+  max-width: 4000px; 
   overflow: hidden;
   display: flex;
   align-content: center;
@@ -321,20 +326,21 @@ nav.scrolled {
 
 /*Footer*/
 .title_content2 {
-  width: 100%;
+  width: 4000px;
   overflow: hidden;
   display: flex;
   align-content: center;
   justify-content: center;
   padding-top: 1.5rem;
-  margin-top: 10.5rem;
+  margin: 10.5rem auto 0 auto; 
 }
 
 .cinta2 {
   display: flex;
   white-space: nowrap;
   align-content: center;
-  animation: mover1 40s linear infinite;
+  justify-content: left;
+  animation: mover1 35s linear infinite;
 }
 
 .bloque2 {
@@ -403,22 +409,23 @@ footer {
 .light2 {
   position: absolute;
   border-radius: 50%;
-  size: 120px;
   /*animation: moverX 16s infinite alternate ease-in-out;*/
   filter: blur(125px);
   width: 650px;
   height: 650px;
+  z-index: -10;
   opacity: 0.5;
   background-color: #4CC2B2;
   bottom: -425px;
-  left: 500px;
+  left: 50%;
+  transform: translateX(-50%);
   pointer-events: none;
   overflow: hidden;
 }
 
 /* Subtítulo de Encabezado principal en movimiento */
 .subtitle_content {
-  max-width: 2000px;
+  max-width: 4000px;
   overflow: hidden;
   background: transparent;
   white-space: nowrap;
@@ -1523,8 +1530,6 @@ h3 {
   .menu {
     gap: 2.5rem; /* reducimos espacio */
   }
-
-  
 }
 
 @media (max-width: 768px) {
@@ -1608,6 +1613,10 @@ h3 {
   .bxl.bx-github,
   .bxl.bx-linkedin {
     font-size: 32px;
+  }
+
+  .cinta {
+    margin-top: 0px;
   }
 
   .title_content {
