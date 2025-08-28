@@ -317,7 +317,7 @@ nav.scrolled {
 
 @keyframes mover {
   0% {
-    transform: translateX(0%);
+    transform: translateX(-5%);
   }
   100% {
     transform: translateX(-40%);
@@ -1657,7 +1657,6 @@ h3 {
 
   .cinta {
     margin-top: 0px;
-    animation: mover 45s linear infinite;
   }
 
   .title_content {
