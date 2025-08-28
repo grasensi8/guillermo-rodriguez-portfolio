@@ -1675,6 +1675,10 @@ h3 {
     padding: 0 1.5rem;
   }
 
+  a.button-primary {
+    width: 100%;
+  }
+
   .container-main {
     margin: 0 auto;  /* margen superior más pequeño */
   }
@@ -1751,9 +1755,11 @@ h3 {
   }
 
   .services_band_container2 {
-   flex-wrap: wrap;
-   font-size: 1.5rem;
-   gap: 40px;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    gap: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .services_band_container2 p {
