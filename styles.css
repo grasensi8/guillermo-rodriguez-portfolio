@@ -27,7 +27,6 @@
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: opacity 0.2s ease;
 }
 
 *, *::before, *::after{
@@ -49,6 +48,7 @@ body {
   font-size: 16px;
   background-color: var(--colorSecundario);
   color: var(--colorWhite);
+  position: relative;
 }
 
 h1, h2, h3, h4 {
@@ -242,8 +242,8 @@ nav.scrolled {
 #backToTop {
   position: fixed;
   display: inline-flex;
-  bottom: 50px;
-  right: 30px;
+  bottom: 25px;
+  left: 50%;
   color: white;
   border: none;
   padding: 10px 10px 10px 20px;
@@ -252,11 +252,11 @@ nav.scrolled {
   font-family: var(--fontSecundary);
   z-index: 10;
   transition: opacity 0.3s ease;
-  background-color: rgba(255, 255, 255, 0.05); /* fondo blanco semitransparente */
+  background-color: rgba(255, 255, 255, 0.07); /* fondo blanco semitransparente */
   border-radius: 12px;
   backdrop-filter: blur(8px); /* efecto glassmorphism */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateX(110px);
+  transform: translateX(-50%) translateY(100px);
   opacity: 0;
   transition: opacity 1.2s ease, transform 1.2s ease;
   pointer-events: none;
@@ -266,7 +266,7 @@ nav.scrolled {
   display: inline-flex;
   text-align: center;
   opacity: 1;
-  transform: translateX(-10px);
+  transform: translateX(-50%) translateY(0);
   pointer-events: auto; /* vuelve a poder clicarse */
 }
 
@@ -280,7 +280,7 @@ nav.scrolled {
 
 /* Encabezado principal en movimiento */
 .title_content {
-  max-width: 4000px; 
+  max-width: 100%;
   overflow: hidden;
   display: flex;
   align-content: center;
@@ -326,13 +326,13 @@ nav.scrolled {
 
 /*Footer*/
 .title_content2 {
-  width: 4000px;
+  width: 100%;
   overflow: hidden;
   display: flex;
   align-content: center;
   justify-content: center;
   padding-top: 1.5rem;
-  margin: 10.5rem auto 0 auto; 
+  margin: 7.5rem auto 0 auto; 
 }
 
 .cinta2 {
@@ -404,6 +404,7 @@ footer {
   opacity: 0.5;
   font-size: 1.5rem;
   margin-top: 16px;
+  padding: 1rem;
 }
 
 .light2 {
@@ -477,7 +478,7 @@ footer {
   max-width: 525px;
   height: auto;
   mask-image: linear-gradient(black 85%, transparent);
-  filter: drop-shadow(0 0 20px var(--colorTerciary));
+  filter: drop-shadow(0 0 15px var(--colorTerciary));
   padding: 0 20px; /* Añade espacio horizontal a la izquierda y derecha */
   z-index: 0;
   margin-top: 30px;
@@ -700,6 +701,11 @@ h1 {
 .section_space2 {
   margin-top: 50px;
   margin-bottom: 150px;
+}
+
+.section_space_normal {
+  margin-top: 200px;
+  margin-bottom: 200px;
 }
 
 .form_container {
@@ -1145,6 +1151,7 @@ h3 {
 .professional {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 .box {
@@ -1589,8 +1596,22 @@ h3 {
     width: max-content;
   }
 
+  #backToTop {
+    font-size: 18px;
+    border-radius: 10px;
+    bottom: 40px;
+  }
+
+  #backToTop i {
+    font-size: 23px;
+    padding-left: 5px;
+  }
+
   .photo_container {
-    display: none;
+    height: 500px; /* reducir tamaño de la foto */
+    filter: none;
+    transition: none;
+    position: static;
   }
 
   .socialMedia {
@@ -1598,7 +1619,7 @@ h3 {
     top: 0;
     right: 0;
     margin: 0;
-    gap: 2rem;
+    gap: 20px;
     background-color: transparent;
     box-shadow: none;
     border-radius: 0;
@@ -1621,7 +1642,7 @@ h3 {
   }
 
   .title_content {
-    margin-top: 200px;
+    margin-top: 80px;
   }
 
   .subtitle_content {
@@ -1629,7 +1650,7 @@ h3 {
   }
 
   .item, .item1, .item2 {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   .item1 {
@@ -1641,7 +1662,7 @@ h3 {
   }
 
   .section_space {
-    margin-top: 220px;
+    margin-top: 80px;
   }
 
   .section_space11 {
@@ -1733,12 +1754,12 @@ h3 {
   }
 
   .parragragh_style10 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     font-weight: 450;
   }
 
   .parragragh_style9 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
 
   .project_card {
@@ -1784,7 +1805,7 @@ h3 {
   }
 
   .cinta2 {
-    animation: mover1 60s linear infinite forwards;
+    animation: mover1 80s linear infinite forwards;
   }
 
   .skill-main {
@@ -1798,5 +1819,9 @@ h3 {
   .skill-left .skill-bar .info {
     padding: 0;
     align-items: normal;
+  }
+
+  .title_content2 {
+    margin-top: 160px;
   }
 }

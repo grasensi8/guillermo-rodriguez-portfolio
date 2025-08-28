@@ -44,6 +44,7 @@ const photoZone = document.getElementById('photoZone');
 const introText1 = document.querySelector('.intro-text');
 const introText2 = document.querySelector('.intro-text2');
 
+if (window.innerWidth > 768) {
 if (photoZone && introText1 && introText2) {
   window.addEventListener('mousemove', (e) => {
     const rect = photoZone.getBoundingClientRect();
@@ -73,17 +74,16 @@ if (photoZone && introText1 && introText2) {
     }
   });
 }
+}
 
 //Botón para volver arriba al menu
   const backToTopBtn = document.getElementById('backToTop');
 
   window.addEventListener('scroll', () => {
-    if (window.innerWidth > 768) { // solo en escritorio
     if (window.scrollY > 1000) {
       backToTopBtn.classList.add('show');
     } else {
       backToTopBtn.classList.remove('show');
-    }
     }
   });
 
