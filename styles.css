@@ -628,7 +628,7 @@ a.button-primary:hover {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 100px;
+  gap: 80px;
   row-gap: 60px;
   color: var(--colorWhite);
   text-align: center;
@@ -970,9 +970,9 @@ h3 {
 
 .projects_cards__show_container {
   scrollbar-width: none;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 80px 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  padding: 80px 20px;
   justify-content: center;
   gap: 50px;
 }
@@ -981,6 +981,7 @@ h3 {
   list-style: none;
   flex-shrink: 0;
   flex: 0 0 auto;
+  width: 100%;
 }
 
 .projects_cards__show_container li img {
@@ -1324,8 +1325,8 @@ h3 {
   font-weight: 500;
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .services_band_container2 p {
@@ -1397,7 +1398,7 @@ h3 {
 .flex_container_projects {
   margin-top: 150px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   column-gap: 50px;
   row-gap:50px;
 }
@@ -1423,6 +1424,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .image_project_container {
@@ -1431,6 +1433,7 @@ h3 {
   object-fit: cover; 
   transition: transform 0.3s ease, box-shadow 0.3s linear;
   align-items: flex-start;
+  width: inherit;
 }
 
 .image_wrapper:hover .image_project_container {
@@ -1542,11 +1545,15 @@ h3 {
 
   .container-main {
     margin: 60px auto 0 auto;  /* margen superior aún más pequeño */
-    padding: 30px 10px;        /* padding reducido */
+    padding: 40px 20px;        /* padding reducido */
   }
 
   .menu {
     gap: 2.5rem; /* reducimos espacio */
+  }
+
+  .flex_container_projects a {
+    width: 100%; /* tarjetas ocupan todo el ancho disponible */
   }
 }
 
@@ -1566,7 +1573,7 @@ h3 {
 
   .container-main {
   margin: 40px auto 0 auto;  /* margen superior más pequeño */
-  padding: 20px 30px;         /* padding reducido al mínimo */
+  padding: 20px 25px;         /* padding reducido al mínimo */
   width: 100%;               
   box-sizing: border-box;
   }
@@ -1675,10 +1682,6 @@ h3 {
     padding: 0 1.5rem;
   }
 
-  a.button-primary {
-    width: 100%;
-  }
-
   .container-main {
     margin: 0 auto;  /* margen superior más pequeño */
   }
@@ -1698,7 +1701,7 @@ h3 {
 
   .services_band_container {
     font-size: 1.5rem;
-    gap: 60px;
+    gap: 50px;
     padding: 20px;
   }
 
@@ -1746,7 +1749,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 60px;
+    gap: 40px;
     margin-top: 0px;
   }
 
@@ -1798,18 +1801,14 @@ h3 {
   }
 
   .project_card {
-    max-width: 340px;
+    min-width: 250px;
+    max-height: 400px;
     padding: 0;
   }
 
   .image_wrapper {
     height: 300px;
     border-radius: 10px 10px 0px 0px;
-  }
-
-  .image_project_container {
-    height: 300px;
-    padding: 0 30px;
   }
 
   .project_card_text {
@@ -1858,5 +1857,11 @@ h3 {
 
   .title_content2 {
     margin-top: 160px;
+  }
+}
+
+@media (max-width: 320px) {
+  a.button-primary {
+    width: 100%;
   }
 }
