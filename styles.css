@@ -1491,6 +1491,100 @@ h3 {
   margin-bottom: 80px;
 }
 
+/* Project html*/
+.title_project {
+  font-size: 2rem;
+  color: var(--colorWhite);
+  font-family: var(--fontSecundary);
+  margin: 100px auto 80px auto;
+  padding: 0;
+  line-height: 160%;
+  font-weight: 400;
+  max-width: 800px;
+}
+
+.parragragh_style12 {
+  font-size: var(--bodySize2);
+  color: var(--colorPrimario);
+  font-family: var(--fontSecundary);
+  font-weight: 400;
+  max-width: 800px;
+  letter-spacing: 1.5px;
+}
+
+.parragragh_style13 {
+  font-size: var(--bodySize2);
+  color: var(--colorGrey);
+  font-family: var(--fontSecundary);
+  line-height: 180%;
+  font-weight: 400;
+  max-width: 800px;
+  min-width: 120px;
+}
+
+.parragragh_style14 {
+  font-size: var(--bodySize);
+  color: var(--colorGrey);
+  font-family: var(--fontSecundary);
+  margin: 30px auto;
+  padding: 16px 0 16px 0;
+  line-height: 160%;
+  font-weight: 350;
+  max-width: 800px;
+  min-width: 250px;
+}
+
+.container-project-information {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 800px;
+  margin: 50px auto;
+  justify-content: space-between;
+}
+
+.container-images-project {
+  display: flex;         
+  flex-wrap: wrap;         
+  gap: 60px;                  
+  justify-content: center;    
+  align-items: center;     
+  margin: 60px auto;   
+  border-radius: 10px;
+}
+
+.container-images-project img {
+  flex: 1 1 300px;          
+  max-width: 800px;  
+  width: 100%;      
+  height: auto;                
+  object-fit: cover;      
+}
+
+.icon-behance-size2 {
+  font-size: 26px;
+  padding: 0px 0px 2px 6px;
+}
+
+.container-gallery-project {
+  display: flex;    
+  flex-wrap: wrap;           
+  gap: 20px;            
+  flex-direction: row;
+  width: 100%;
+  margin: 200px auto 60px auto;
+  justify-content: center
+}
+
+.container-gallery-project img {      
+  max-width: 340px;     
+  height: auto;           
+  object-fit: cover;       
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  transition: transform 0.3s;
+  border-radius: 8px;
+}
+
 @media (max-width: 1024px) {
   :root {
     --h1Size: 48px;
@@ -1554,6 +1648,10 @@ h3 {
 
   .flex_container_projects a {
     width: 100%; /* tarjetas ocupan todo el ancho disponible */
+  }
+
+  .container-gallery-project {
+    flex-wrap: nowrap;
   }
 }
 
