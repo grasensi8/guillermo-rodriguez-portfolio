@@ -1493,13 +1493,14 @@ h3 {
 
 /* Project html*/
 .title_project {
-  font-size: 2rem;
-  color: var(--colorWhite);
-  font-family: var(--fontSecundary);
-  margin: 100px auto 80px auto;
+  font-size: 2.5rem;
+  color: var(--colorPrimario);
+  font-family: var(--fontPrimary);
+  text-align: center;
+  font-weight: 600;
+  margin: 80px auto 80px auto;
   padding: 0;
   line-height: 160%;
-  font-weight: 400;
   max-width: 800px;
 }
 
@@ -1523,10 +1524,10 @@ h3 {
 }
 
 .parragragh_style14 {
-  font-size: var(--bodySize);
+  font-size: 1.5rem;
   color: var(--colorGrey);
   font-family: var(--fontSecundary);
-  margin: 30px auto;
+  margin: 30px auto 0px auto;
   padding: 16px 0 16px 0;
   line-height: 160%;
   font-weight: 350;
@@ -1535,21 +1536,21 @@ h3 {
 }
 
 .container-project-information {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
   max-width: 800px;
-  margin: 50px auto;
+  margin: 50px auto 100px auto;
   justify-content: space-between;
 }
 
 .container-images-project {
   display: flex;         
   flex-wrap: wrap;         
-  gap: 60px;                  
+  gap: 40px;                  
   justify-content: center;    
   align-items: center;     
-  margin: 60px auto;   
+  margin: 20px auto 20px auto;   
   border-radius: 10px;
 }
 
@@ -1576,9 +1577,11 @@ h3 {
   justify-content: center
 }
 
-.container-gallery-project img {      
-  max-width: 340px;     
-  height: auto;           
+.container-gallery-project img {    
+  max-width: 350px;  
+  max-height: 350px; 
+  min-width: 300px;     
+  min-height: 300px;           
   object-fit: cover;       
   box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
   transition: transform 0.3s;
