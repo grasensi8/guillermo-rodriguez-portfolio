@@ -1317,7 +1317,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 100px;
   row-gap: 60px;
   color: var(--colorWhite);
@@ -1666,6 +1666,10 @@ h3 {
 
   .container-project-information {
     margin-bottom: 40px;
+  }
+
+  .services_band_container2 {
+    flex-wrap: wrap;
   }
 }
 

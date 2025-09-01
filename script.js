@@ -291,6 +291,7 @@ const imageFiles = [
   "images/Imágenes proyectos/Libro las Profecías Mayas.jpg",
   "images/Imágenes proyectos/Carteles Music Festival.png"
 ];
+
 // Seleccionamos el contenedor de la galería
 const gallery = document.getElementById("project-gallery");
 const imgs = gallery.querySelectorAll("img");
