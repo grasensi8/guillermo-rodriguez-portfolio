@@ -1493,7 +1493,7 @@ h3 {
 
 /* Project html*/
 .title_project {
-  font-size: 2.5rem;
+  font-size: var(--h3Size);
   color: var(--colorPrimario);
   font-family: var(--fontPrimary);
   text-align: center;
@@ -1524,7 +1524,7 @@ h3 {
 }
 
 .parragragh_style14 {
-  font-size: 1.5rem;
+  font-size: var(--bodySize);
   color: var(--colorGrey);
   font-family: var(--fontSecundary);
   margin: 30px auto 0px auto;
@@ -1574,7 +1574,7 @@ h3 {
   flex-direction: row;
   width: 100%;
   margin: 200px auto 60px auto;
-  justify-content: center
+  justify-content: center;
 }
 
 .container-gallery-project img {    
@@ -1655,6 +1655,17 @@ h3 {
 
   .container-gallery-project {
     flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: left;
+    margin-top: 160px;
+  }
+
+  .title_project {
+    margin-bottom: 20px;
+  }
+
+  .container-project-information {
+    margin-bottom: 40px;
   }
 }
 
@@ -1958,6 +1969,10 @@ h3 {
 
   .title_content2 {
     margin-top: 160px;
+  }
+
+  .container-images-project {
+    gap: 20px;
   }
 }
 
