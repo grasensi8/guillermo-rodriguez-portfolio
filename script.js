@@ -277,9 +277,20 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle.textContent = toggle.classList.contains("active") ? "✖" : "☰";
   });
 
-  
+
 //JS de la página project.html
 // Galería de proyectos
+// Lista de todas las imágenes de la galería disponibles
+const imageFiles = [
+  "images/Imágenes proyectos/Pizzeria Quattrocento.png",
+  "images/Imágenes proyectos/Brand Global Summit.png",
+  "images/Imágenes proyectos/Carta restauirante Hattori hanzo.png",
+  "images/Imágenes proyectos/Unido RCID.png",
+  "images/Imágenes proyectos/Manual Señalética.png",
+  "images/Imágenes proyectos/Revista A TRAVÉS.png",
+  "images/Imágenes proyectos/Libro las Profecías Mayas.jpg",
+  "images/Imágenes proyectos/Carteles Music Festival.png"
+];
 // Seleccionamos el contenedor de la galería
 const gallery = document.getElementById("project-gallery");
 const imgs = gallery.querySelectorAll("img");

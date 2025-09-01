@@ -67,17 +67,3 @@ fetch("data/projects.json")
     }
   })
 .catch(error => console.error("Error cargando projects.json:", error));
-
-
-// Imágenes galería
-// Lista de todas las imágenes disponibles
-const imageFiles = [
-  "images/Imágenes proyectos/Pizzeria Quattrocento.png",
-  "images/Imágenes proyectos/Brand Global Summit.png",
-  "images/Imágenes proyectos/Carta restauirante Hattori hanzo.png",
-  "images/Imágenes proyectos/Unido RCID.png",
-  "images/Imágenes proyectos/Manual Señalética.png",
-  "images/Imágenes proyectos/Revista A TRAVÉS.png",
-  "images/Imágenes proyectos/Libro las Profecías Mayas.jpg",
-  "images/Imágenes proyectos/Carteles Music Festival.png"
-];
