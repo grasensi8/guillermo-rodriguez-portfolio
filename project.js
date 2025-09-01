@@ -81,23 +81,3 @@ const imageFiles = [
   "images/Imágenes proyectos/Libro las Profecías Mayas.jpg",
   "images/Imágenes proyectos/Carteles Music Festival.png"
 ];
-
-// Seleccionamos el contenedor de la galería
-const gallery = document.getElementById("project-gallery");
-const imgs = gallery.querySelectorAll("img");
-
-// Hacemos una copia del array para ir eliminando las usadas
-const availableImages = [...imageFiles];
-
-// Reemplazamos cada imagen sin repetir
-imgs.forEach(img => {
-  if (availableImages.length === 0) return; // no quedan más imágenes
-
-  // Elegir índice aleatorio
-  const randomIndex = Math.floor(Math.random() * availableImages.length);
-  img.src = availableImages[randomIndex];
-  img.alt = "Imagen de proyecto";
-
-  // Eliminar la imagen usada para no repetir
-  availableImages.splice(randomIndex, 1);
-});
