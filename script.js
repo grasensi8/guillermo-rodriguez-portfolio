@@ -126,30 +126,6 @@ document.querySelectorAll('.scroll-flip-down').forEach(el => {
   observer.observe(el);
 });
 
-/*//Animación de servicios show room portfolio
-const container = document.querySelector('.projects_cards__show_container');
-const leftArrow = document.querySelector('.left-arrow');
-const rightArrow = document.querySelector('.right-arrow');
-const scrollAmount = 600;
-
-
-if (container && leftArrow && rightArrow) {
-  if (window.innerWidth > 768) {
-    // Solo en escritorio
-    leftArrow.addEventListener('click', () => {
-      container.scrollBy({ left: -scrollAmount });
-    });
-
-    rightArrow.addEventListener('click', () => {
-      container.scrollBy({ left: scrollAmount });
-    });
-  } else {
-    // En móviles, opcional: ocultar los botones
-    leftArrow.style.display = 'none';
-    rightArrow.style.display = 'none';
-  }
-}*/
-
 //Animación skills tipo radio
 document.addEventListener("DOMContentLoaded", () => {
   const circles = document.querySelectorAll('.circle');
@@ -290,7 +266,8 @@ const imageFiles = [
   "images/Imágenes proyectos/Manual Señalética.png",
   "images/Imágenes proyectos/Revista A TRAVÉS.png",
   "images/Imágenes proyectos/Libro las Profecías Mayas.jpg",
-  "images/Imágenes proyectos/Carteles Music Festival.png"
+  "images/Imágenes proyectos/Carteles Music Festival.png",
+  "images/Imágenes proyectos/ChesstraWeb.png"
 ];
 
 // Seleccionamos el contenedor de la galería
