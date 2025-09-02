@@ -1493,7 +1493,7 @@ h3 {
 
 /* Project html*/
 .title_project {
-  font-size: var(--h3Size);
+  font-size: var(--h2Size);
   color: var(--colorPrimario);
   font-family: var(--fontPrimary);
   text-align: center;
@@ -1524,7 +1524,7 @@ h3 {
 }
 
 .parragragh_style14 {
-  font-size: var(--bodySize);
+  font-size: var(--bodySize2);
   color: var(--colorGrey);
   font-family: var(--fontSecundary);
   margin: 30px auto 0px auto;

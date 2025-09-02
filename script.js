@@ -280,6 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //JS de la página project.html
 // Galería de proyectos
+if (window.location.pathname.endsWith("project.html")) {
 // Lista de todas las imágenes de la galería disponibles
 const imageFiles = [
   "images/Imágenes proyectos/Pizzeria Quattrocento.png",
@@ -311,3 +312,4 @@ imgs.forEach(img => {
   // Eliminar la imagen usada para no repetir
   availableImages.splice(randomIndex, 1);
 });
+}

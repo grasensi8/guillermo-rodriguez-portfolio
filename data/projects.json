@@ -6,6 +6,7 @@
     "service": "Identidad de Marca / Branding",
     "sector": "Gastronomía / Restauración",
     "year": "2023",
+    "project-main-image": "images/Imágenes proyectos/PizzeriaQuattrocento/PizzeriaQuattrocento.png",
     "description": [
     "Este proyecto de marca y branding para Pizzería Quattrocento es una propuesta de diseño que fusiona la tradición culinaria italiana con la elegancia del Renacimiento. A través de una identidad visual refinada y coherente, se busca transmitir la esencia artesanal, elegante y sofisticada de la marca.",
     "El trabajo realizado consta de la maquetación y desarrollo del Manual de Identidad de Marca que establece directrices claras para el uso de todos los elementos visuales, garantizando una coherencia en todas las comunicaciones. Incluye la creación de un logotipo distintivo, elección de tipografías, una paleta cromática y ejecución de aplicaciones gráficas que refuerzan la personalidad de la marca en diversos soportes."
@@ -25,6 +26,39 @@
       "images/Imágenes proyectos/PizzeriaQuattrocento/quattrocento-7.gif"
     ],
     "metaDescription": "Manual de Identidad de Marca para Pizzería Quattrocento: branding aplicado a logotipo, paleta cromática, tipografía y aplicaciones visuales.",
-    "linkBehance" : "https://www.behance.net/gallery/232081323/Manual-de-Identidad-de-Marca-Pizzeria-Quattrocento"
+    "link": "https://www.behance.net/gallery/232081323/Manual-de-Identidad-de-Marca-Pizzeria-Quattrocento"
+  },
+
+  {
+    "id": "CHESSTRA",
+    "title": "CHESSTRA - Web Platform",
+    "client": "Proyecto académico / TFG",
+    "service": "Diseño UX-UI / Diseño Web / Identidad de Marca",
+    "sector": "Educación / Tecnología / Ajedrez",
+    "year": "2025",
+    "project-main-image": "images/Imágenes proyectos/CHESSTRA/ChesstraWeb.png",
+    "description": [
+    "CHESSTRA es una plataforma web innovadora que reimagina la experiencia del ajedrez en la era digital, combinando enseñanza interactiva con un diseño atractivo. El proyecto aplica metodologías de UX/UI y diseño de marca para crear una experiencia única y envolvente. El enfoque del proyecto es ofrecer una experiencia de usuario intuitiva y educativa, integrando elementos visuales llamativos con funcionalidades prácticas que facilitan el aprendizaje del ajedrez y fomentan su práctica a nivel global en un entorno accesible y funcional.",
+    "El trabajo incluye el desarrollo completo de la identidad de marca, abarcando naming, logotipo, paleta cromática, valores de marca y directrices de uso. Planificación y ejecución de herramientas y métodologías de UX y UI para diseñar unos wireframes y un prototipo interactivo de la interfaz web de CHESSTRA. Construcción de una guía de estilo completa que reúne todas las pautas y reglas a tener en cuenta para el diseño de la interfaz web",
+    "Los objetivos alcanzados en el proyecto fueron: garantizar una buena experiencia de usuario con la web, mostrar una interfaz estética, moderna e interactiva, conectar con un público joven, fomentar la interacción social y educativa y facilitar el aprendizaje del ajedrez en un entorno digital innovador y accesible."
+    ],
+    "images": [
+      "images/Imágenes proyectos/CHESSTRA/CHESSTRA-1.jpg",
+      "images/Imágenes proyectos/CHESSTRA/CHESSTRA-2.png",
+      "images/Imágenes proyectos/CHESSTRA/ChesstraPlan.png"
+    ],
+    "moreImages": [
+      "images/Imágenes proyectos/CHESSTRA/CHESSTRA-3.png",
+      "images/Imágenes proyectos/CHESSTRA/CHESSTRA-4.png",
+      "images/Imágenes proyectos/CHESSTRA/CHESSTRA-5.png",
+      "images/Imágenes proyectos/CHESSTRA/CHESSTRA-6.png"
+    ],
+    "prototype": "https://embed.figma.com/proto/4q6W4uIuxqLW0edpiRXCt4/Chesstra-web?node-id=16-365&p=f&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=16%3A365&embed-host=share",
+    "details": [
+      "El desarrollo de CHESSTRA se apoyó en un proceso completo de UX research y diseño de interacción. Se realizó una investigación con usuarios mediante entrevistas, mapas de empatía y análisis de arquetipos para identificar necesidades y objetivos. Se llevó a cabo un benchmarking de competidores para detectar buenas prácticas y oportunidades de mejora. Se creó un inventario de contenidos y un árbol de contenidos para estructurar la información de manera clara y accesible.",
+      "A partir de estos hallazgos se definieron escenarios de uso, user journeys y flujos de interacción que guían la experiencia del usuario. Gracias a todo este trabajo se desarrollaron los wireframes y el prototipo de la web en Figma. Por último, se realizó un testeo con usuarios, validando decisiones de diseño y optimizando la experiencia de la plataforma."
+    ],
+    "metaDescription": "Diseño UX/UI, diseño web y desarrollo de la marca CHESSTRA, una plataforma innovadora que revoluciona la experiencia del ajedrez en la era digital.",
+    "link": "https://openaccess.uoc.edu/items/0862491d-7cf2-42b6-bc76-cf4709857161"
   }
 ]

@@ -33,8 +33,22 @@ fetch("data/projects.json")
     });
 
     // Párrafos
-    document.getElementById("project-details").textContent = project.details;
+    const detailsContainer = document.getElementById("project-details");
+    project.details.forEach(paragraph => {
+      const p = document.createElement("p");
+      p.textContent = paragraph;
+      detailsContainer.appendChild(p);
 
+      const br = document.createElement("br");
+      detailsContainer.appendChild(br);
+    });
+
+    // Imagen main del proyecto
+    const mainImgContainer = document.getElementById("project-main-image");
+    const mainImg = document.createElement("img");
+    mainImg.src = project["project-main-image"]; // Una sola imagen
+    mainImg.alt = project.title;
+    mainImgContainer.appendChild(mainImg);
 
     // Imágenes del proyecto
     const imgContainer = document.getElementById("project-images");
@@ -55,7 +69,7 @@ fetch("data/projects.json")
     });
 
     //Link Behance
-    document.getElementById("project-link-behance").href = project.linkBehance;
+    document.getElementById("project-link").href = project.link;
 
     // Cambiar título de la pestaña
     document.title = `Portfolio Guillermo Rodríguez Asensio | ${project.title}`;
@@ -64,6 +78,28 @@ fetch("data/projects.json")
     const metaDesc = document.querySelector("meta[name='description']");
     if (metaDesc) {
       metaDesc.setAttribute("content", project.metaDescription);
+    }
+    
+    // Mostrar prototipo Figma directamente en CHESSTRA
+    const projectContainer = document.getElementById("project-content");
+
+    if (projectContainer) {
+      const prototypeContainer = document.createElement("div");
+      prototypeContainer.classList.add("figma-prototype");
+
+    prototypeContainer.innerHTML = `
+    <h3 style="margin-top: 160px; margin-bottom: 40px; text-align: center;">Prototipo interactivo</h3>
+    <div style="display:flex; justify-content:center; margin:1rem 0;">
+      <div style="position:relative; width:100%; max-width:1200px; padding-top:75%; overflow:hidden; background-color: transparent; border-radius:12px;">
+        <iframe 
+          src="${project.prototype}" 
+          allowfullscreen 
+          style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;">
+        </iframe>
+      </div>
+    </div>
+    `;
+    projectContainer.appendChild(prototypeContainer);
     }
   })
 .catch(error => console.error("Error cargando projects.json:", error));
