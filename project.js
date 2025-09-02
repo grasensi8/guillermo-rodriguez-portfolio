@@ -81,6 +81,7 @@ fetch("data/projects.json")
     }
     
     // Mostrar prototipo Figma directamente en CHESSTRA
+    if (project.title === "CHESSTRA - Web Platform") {
     const projectContainer = document.getElementById("project-content");
 
     if (projectContainer) {
@@ -100,6 +101,13 @@ fetch("data/projects.json")
     </div>
     `;
     projectContainer.appendChild(prototypeContainer);
+    // Nos aseguramos de que se muestre
+    projectContainer.style.display = "block";
+    }
+    } else {
+    // Si no es CHESSTRA, ocultamos completamente el div
+    const projectContainer = document.getElementById("project-content");
+    if (projectContainer) projectContainer.style.display = "none";
     }
   })
 .catch(error => console.error("Error cargando projects.json:", error));
