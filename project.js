@@ -80,7 +80,7 @@ fetch("data/projects.json")
       metaDesc.setAttribute("content", project.metaDescription);
     }
     
-    // Mostrar prototipo Figma directamente en CHESSTRA
+    // Mostrar prototipo Figma de CHESSTRA solo en la página proyecto de CHESSTRA en mi portfolio
     if (project.title === "CHESSTRA - Web Platform") {
     const projectContainer = document.getElementById("project-content");
 

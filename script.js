@@ -280,7 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //JS de la página project.html
 // Galería de proyectos
-if (window.location.pathname.endsWith("project.html")) {
+if (window.location.pathname.includes("/project")) {
 // Lista de todas las imágenes de la galería disponibles
 const imageFiles = [
   "images/Imágenes proyectos/Pizzeria Quattrocento.png",
