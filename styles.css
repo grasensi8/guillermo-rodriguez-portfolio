@@ -599,6 +599,12 @@ a.button-primary {
   font-size: 2rem;
 }
 
+.bx-link-external {
+  font-size: 1.5rem;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
 a.button-primary:hover {
   transform: scale(1.1);
   box-shadow: 0 0 12px rgba(181, 235, 218, 0.6);
